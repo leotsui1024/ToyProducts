@@ -64,7 +64,7 @@
             panel1.Controls.Add(label2);
             panel1.Controls.Add(label1);
             panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(2, 2, 2, 2);
+            panel1.Margin = new Padding(2);
             panel1.Name = "panel1";
             panel1.Size = new Size(237, 461);
             panel1.TabIndex = 0;
@@ -74,7 +74,7 @@
             // 
             butsecurity.BackColor = Color.FromArgb(110, 172, 218);
             butsecurity.Location = new Point(7, 383);
-            butsecurity.Margin = new Padding(2, 2, 2, 2);
+            butsecurity.Margin = new Padding(2);
             butsecurity.Name = "butsecurity";
             butsecurity.Size = new Size(209, 27);
             butsecurity.TabIndex = 9;
@@ -85,7 +85,7 @@
             // 
             butsystem.BackColor = Color.FromArgb(110, 172, 218);
             butsystem.Location = new Point(7, 353);
-            butsystem.Margin = new Padding(2, 2, 2, 2);
+            butsystem.Margin = new Padding(2);
             butsystem.Name = "butsystem";
             butsystem.Size = new Size(209, 27);
             butsystem.TabIndex = 8;
@@ -96,7 +96,7 @@
             // 
             butinventory.BackColor = Color.FromArgb(110, 172, 218);
             butinventory.Location = new Point(7, 260);
-            butinventory.Margin = new Padding(2, 2, 2, 2);
+            butinventory.Margin = new Padding(2);
             butinventory.Name = "butinventory";
             butinventory.Size = new Size(209, 44);
             butinventory.TabIndex = 7;
@@ -107,7 +107,7 @@
             // 
             butproject.BackColor = Color.FromArgb(110, 172, 218);
             butproject.Location = new Point(7, 213);
-            butproject.Margin = new Padding(2, 2, 2, 2);
+            butproject.Margin = new Padding(2);
             butproject.Name = "butproject";
             butproject.Size = new Size(209, 44);
             butproject.TabIndex = 6;
@@ -118,7 +118,7 @@
             // 
             butsales.BackColor = Color.FromArgb(110, 172, 218);
             butsales.Location = new Point(7, 167);
-            butsales.Margin = new Padding(2, 2, 2, 2);
+            butsales.Margin = new Padding(2);
             butsales.Name = "butsales";
             butsales.Size = new Size(209, 44);
             butsales.TabIndex = 5;
@@ -129,7 +129,7 @@
             // 
             butproduct.BackColor = Color.FromArgb(110, 172, 218);
             butproduct.Location = new Point(7, 120);
-            butproduct.Margin = new Padding(2, 2, 2, 2);
+            butproduct.Margin = new Padding(2);
             butproduct.Name = "butproduct";
             butproduct.Size = new Size(209, 44);
             butproduct.TabIndex = 1;
@@ -142,7 +142,7 @@
             dataGridView1.BackgroundColor = Color.FromArgb(110, 172, 218);
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(72, 60);
-            dataGridView1.Margin = new Padding(2, 2, 2, 2);
+            dataGridView1.Margin = new Padding(2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.Size = new Size(140, 27);
@@ -153,7 +153,7 @@
             name.BackgroundColor = Color.FromArgb(110, 172, 218);
             name.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             name.Location = new Point(72, 33);
-            name.Margin = new Padding(2, 2, 2, 2);
+            name.Margin = new Padding(2);
             name.Name = "name";
             name.RowHeadersWidth = 62;
             name.Size = new Size(140, 27);
@@ -200,11 +200,12 @@
             // 
             dataproject.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataproject.Location = new Point(243, 120);
-            dataproject.Margin = new Padding(2, 2, 2, 2);
+            dataproject.Margin = new Padding(2);
             dataproject.Name = "dataproject";
             dataproject.RowHeadersWidth = 62;
             dataproject.Size = new Size(572, 290);
             dataproject.TabIndex = 1;
+            dataproject.CellContentClick += dataproject_CellContentClick;
             // 
             // label4
             // 
@@ -227,7 +228,8 @@
             Controls.Add(label4);
             Controls.Add(dataproject);
             Controls.Add(panel1);
-            Margin = new Padding(2, 2, 2, 2);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            Margin = new Padding(2);
             MaximizeBox = false;
             Name = "ToyProducts";
             Text = "ToyProducts";
