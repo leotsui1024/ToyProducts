@@ -99,6 +99,9 @@ namespace ToyProducts
             return "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=ITP4915M.accdb";
         }
 
+        private void txtConfirmPassword_TextChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 }
