@@ -8,6 +8,12 @@ namespace ToyProducts
 {
     public partial class ToyProducts : Form
     {
+        // local cache of the rows we need 暫存從資料庫抓出的書籍資料的表格
+        private readonly DataTable dt = new DataTable();
+
+        // current position in the table 追蹤目前選中的資料列索引
+        private int rowIndex = 0;
+
         private string dbPath;
         private OleDbConnection con;
 
@@ -61,5 +67,10 @@ namespace ToyProducts
         private void butproduct_Click(object sender, EventArgs e) { }
 
         private void dataproject_CellContentClick(object sender, DataGridViewCellEventArgs e) { }
+
+        private void textPStat_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

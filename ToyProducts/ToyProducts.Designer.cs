@@ -1,7 +1,11 @@
-﻿namespace ToyProducts
+﻿
+
+
+namespace ToyProducts
 {
     partial class ToyProducts
     {
+       // private System.Windows.Forms.TextBox textPCat;
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -42,10 +46,39 @@
             label1 = new Label();
             dataproject = new DataGridView();
             label4 = new Label();
+            PID = new Label();
+            textNName = new TextBox();
+            PName = new Label();
+            textNost = new TextBox();
+            textCost = new TextBox();
+            PCost = new Label();
+            textNPrice = new TextBox();
+            textPrice = new TextBox();
+            PPrice = new Label();
+            PQty = new Label();
+            textQty = new TextBox();
+            textNQty = new TextBox();
+            textPCat = new TextBox();
+            PCat = new Label();
+            textPStat = new TextBox();
+            PStat = new Label();
+            cboNPCat = new ComboBox();
+            cboNPStat = new ComboBox();
+            panel2 = new Panel();
+            panel3 = new Panel();
+            panel4 = new Panel();
+            cboID = new ComboBox();
+            cboName = new ComboBox();
+            btnFirst = new Button();
+            btnLast = new Button();
+            btnRenew = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)name).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataproject).BeginInit();
+            panel2.SuspendLayout();
+            panel3.SuspendLayout();
+            panel4.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -203,7 +236,7 @@
             dataproject.Margin = new Padding(2);
             dataproject.Name = "dataproject";
             dataproject.RowHeadersWidth = 62;
-            dataproject.Size = new Size(786, 396);
+            dataproject.Size = new Size(905, 396);
             dataproject.TabIndex = 1;
             dataproject.CellContentClick += dataproject_CellContentClick;
             // 
@@ -220,25 +253,279 @@
             label4.TabIndex = 10;
             label4.Text = "Project Management";
             // 
+            // PID
+            // 
+            PID.AutoSize = true;
+            PID.Font = new Font("Tahoma", 12F, FontStyle.Bold);
+            PID.Location = new Point(6, 4);
+            PID.Name = "PID";
+            PID.Size = new Size(28, 19);
+            PID.TabIndex = 11;
+            PID.Text = "ID";
+            // 
+            // textNName
+            // 
+            textNName.Location = new Point(166, 31);
+            textNName.Name = "textNName";
+            textNName.Size = new Size(95, 23);
+            textNName.TabIndex = 16;
+            // 
+            // PName
+            // 
+            PName.AutoSize = true;
+            PName.Font = new Font("Tahoma", 12F, FontStyle.Bold);
+            PName.Location = new Point(104, 4);
+            PName.Name = "PName";
+            PName.Size = new Size(56, 19);
+            PName.TabIndex = 14;
+            PName.Text = "Name";
+            // 
+            // textNost
+            // 
+            textNost.Location = new Point(60, 34);
+            textNost.Name = "textNost";
+            textNost.Size = new Size(45, 23);
+            textNost.TabIndex = 19;
+            // 
+            // textCost
+            // 
+            textCost.Location = new Point(60, 7);
+            textCost.Name = "textCost";
+            textCost.ReadOnly = true;
+            textCost.Size = new Size(45, 23);
+            textCost.TabIndex = 18;
+            // 
+            // PCost
+            // 
+            PCost.AutoSize = true;
+            PCost.Font = new Font("Tahoma", 12F, FontStyle.Bold);
+            PCost.Location = new Point(9, 7);
+            PCost.Name = "PCost";
+            PCost.Size = new Size(45, 19);
+            PCost.TabIndex = 17;
+            PCost.Text = "Cost";
+            // 
+            // textNPrice
+            // 
+            textNPrice.Location = new Point(167, 34);
+            textNPrice.Name = "textNPrice";
+            textNPrice.Size = new Size(45, 23);
+            textNPrice.TabIndex = 22;
+            // 
+            // textPrice
+            // 
+            textPrice.Location = new Point(167, 7);
+            textPrice.Name = "textPrice";
+            textPrice.ReadOnly = true;
+            textPrice.Size = new Size(45, 23);
+            textPrice.TabIndex = 21;
+            // 
+            // PPrice
+            // 
+            PPrice.AutoSize = true;
+            PPrice.Font = new Font("Tahoma", 12F, FontStyle.Bold);
+            PPrice.Location = new Point(111, 7);
+            PPrice.Name = "PPrice";
+            PPrice.Size = new Size(50, 19);
+            PPrice.TabIndex = 20;
+            PPrice.Text = "Price";
+            // 
+            // PQty
+            // 
+            PQty.AutoSize = true;
+            PQty.Font = new Font("Tahoma", 12F, FontStyle.Bold);
+            PQty.Location = new Point(218, 7);
+            PQty.Name = "PQty";
+            PQty.Size = new Size(37, 19);
+            PQty.TabIndex = 23;
+            PQty.Text = "Qty";
+            // 
+            // textQty
+            // 
+            textQty.Location = new Point(261, 7);
+            textQty.Name = "textQty";
+            textQty.ReadOnly = true;
+            textQty.Size = new Size(45, 23);
+            textQty.TabIndex = 24;
+            // 
+            // textNQty
+            // 
+            textNQty.Location = new Point(261, 34);
+            textNQty.Name = "textNQty";
+            textNQty.Size = new Size(45, 23);
+            textNQty.TabIndex = 29;
+            // 
+            // textPCat
+            // 
+            textPCat.Location = new Point(91, 4);
+            textPCat.Name = "textPCat";
+            textPCat.ReadOnly = true;
+            textPCat.Size = new Size(45, 23);
+            textPCat.TabIndex = 31;
+            // 
+            // PCat
+            // 
+            PCat.AutoSize = true;
+            PCat.Font = new Font("Tahoma", 12F, FontStyle.Bold);
+            PCat.Location = new Point(2, 4);
+            PCat.Name = "PCat";
+            PCat.Size = new Size(83, 19);
+            PCat.TabIndex = 30;
+            PCat.Text = "Category";
+            // 
+            // textPStat
+            // 
+            textPStat.Location = new Point(218, 4);
+            textPStat.Name = "textPStat";
+            textPStat.ReadOnly = true;
+            textPStat.Size = new Size(45, 23);
+            textPStat.TabIndex = 33;
+            textPStat.TextChanged += textPStat_TextChanged;
+            // 
+            // PStat
+            // 
+            PStat.AutoSize = true;
+            PStat.Font = new Font("Tahoma", 12F, FontStyle.Bold);
+            PStat.Location = new Point(142, 4);
+            PStat.Name = "PStat";
+            PStat.Size = new Size(61, 19);
+            PStat.TabIndex = 32;
+            PStat.Text = "Status";
+            // 
+            // cboNPCat
+            // 
+            cboNPCat.FormattingEnabled = true;
+            cboNPCat.Location = new Point(15, 31);
+            cboNPCat.Name = "cboNPCat";
+            cboNPCat.Size = new Size(121, 23);
+            cboNPCat.TabIndex = 34;
+            // 
+            // cboNPStat
+            // 
+            cboNPStat.FormattingEnabled = true;
+            cboNPStat.Location = new Point(142, 31);
+            cboNPStat.Name = "cboNPStat";
+            cboNPStat.Size = new Size(121, 23);
+            cboNPStat.TabIndex = 35;
+            // 
+            // panel2
+            // 
+            panel2.BackColor = SystemColors.ControlDark;
+            panel2.Controls.Add(cboName);
+            panel2.Controls.Add(cboID);
+            panel2.Controls.Add(PID);
+            panel2.Controls.Add(PName);
+            panel2.Controls.Add(textNName);
+            panel2.Location = new Point(243, 29);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(274, 60);
+            panel2.TabIndex = 10;
+            // 
+            // panel3
+            // 
+            panel3.BackColor = SystemColors.ControlDark;
+            panel3.Controls.Add(textNQty);
+            panel3.Controls.Add(textQty);
+            panel3.Controls.Add(PQty);
+            panel3.Controls.Add(textNPrice);
+            panel3.Controls.Add(textPrice);
+            panel3.Controls.Add(PPrice);
+            panel3.Controls.Add(textNost);
+            panel3.Controls.Add(textCost);
+            panel3.Controls.Add(PCost);
+            panel3.Location = new Point(529, 29);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(321, 60);
+            panel3.TabIndex = 36;
+            // 
+            // panel4
+            // 
+            panel4.BackColor = SystemColors.ControlDark;
+            panel4.Controls.Add(cboNPStat);
+            panel4.Controls.Add(cboNPCat);
+            panel4.Controls.Add(textPStat);
+            panel4.Controls.Add(PStat);
+            panel4.Controls.Add(textPCat);
+            panel4.Controls.Add(PCat);
+            panel4.Location = new Point(873, 29);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(274, 60);
+            panel4.TabIndex = 37;
+            // 
+            // cboID
+            // 
+            cboID.FormattingEnabled = true;
+            cboID.Location = new Point(40, 4);
+            cboID.Name = "cboID";
+            cboID.Size = new Size(46, 23);
+            cboID.TabIndex = 36;
+            // 
+            // cboName
+            // 
+            cboName.FormattingEnabled = true;
+            cboName.Location = new Point(166, 4);
+            cboName.Name = "cboName";
+            cboName.Size = new Size(95, 23);
+            cboName.TabIndex = 37;
+            // 
+            // btnFirst
+            // 
+            btnFirst.Location = new Point(283, 92);
+            btnFirst.Name = "btnFirst";
+            btnFirst.Size = new Size(75, 23);
+            btnFirst.TabIndex = 10;
+            btnFirst.Text = "First";
+            btnFirst.UseVisualStyleBackColor = true;
+            // 
+            // btnLast
+            // 
+            btnLast.Location = new Point(409, 92);
+            btnLast.Name = "btnLast";
+            btnLast.Size = new Size(75, 23);
+            btnLast.TabIndex = 38;
+            btnLast.Text = "First";
+            btnLast.UseVisualStyleBackColor = true;
+            // 
+            // btnRenew
+            // 
+            btnRenew.Location = new Point(679, 92);
+            btnRenew.Name = "btnRenew";
+            btnRenew.Size = new Size(75, 23);
+            btnRenew.TabIndex = 39;
+            btnRenew.Text = "Renew";
+            btnRenew.UseVisualStyleBackColor = true;
+            // 
             // ToyProducts
             // 
             AutoScaleDimensions = new SizeF(96F, 96F);
             AutoScaleMode = AutoScaleMode.Dpi;
-            ClientSize = new Size(1041, 524);
+            ClientSize = new Size(1159, 524);
+            Controls.Add(btnRenew);
+            Controls.Add(btnLast);
+            Controls.Add(btnFirst);
+            Controls.Add(panel4);
+            Controls.Add(panel3);
             Controls.Add(label4);
             Controls.Add(dataproject);
             Controls.Add(panel1);
+            Controls.Add(panel2);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(2);
             MaximizeBox = false;
             Name = "ToyProducts";
-            Text = "ToyProducts";
+            Text = "Project Management";
             Load += ToyProducts_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)name).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataproject).EndInit();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
+            panel4.ResumeLayout(false);
+            panel4.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -259,5 +546,35 @@
         private Button butsystem;
         private DataGridView dataproject;
         private Label label4;
+        private Label PID;
+        private TextBox textPID;
+        private TextBox textNName;
+        private TextBox textName;
+        private Label PName;
+        private TextBox textNost;
+        private TextBox textCost;
+        private Label PCost;
+        private TextBox textNPrice;
+        private TextBox textPrice;
+        private Label PPrice;
+        private Label PQty;
+        private TextBox textQty;
+        private ComboBox cboNQty;
+        private ComboBox cboNPCat;
+        private TextBox textBox1;
+        private TextBox textNQty;
+        private TextBox textPCat;
+        private Label PCat;
+        private TextBox textPStat;
+        private Label PStat;
+        private ComboBox cboNPStat;
+        private Panel panel2;
+        private Panel panel3;
+        private Panel panel4;
+        private ComboBox cboID;
+        private ComboBox cboName;
+        private Button btnFirst;
+        private Button btnLast;
+        private Button btnRenew;
     }
 }
