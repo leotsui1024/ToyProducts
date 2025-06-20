@@ -66,14 +66,14 @@
             panel1.Location = new Point(0, 0);
             panel1.Margin = new Padding(2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(237, 461);
+            panel1.Size = new Size(237, 516);
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
             // 
             // butsecurity
             // 
             butsecurity.BackColor = Color.FromArgb(110, 172, 218);
-            butsecurity.Location = new Point(7, 383);
+            butsecurity.Location = new Point(7, 473);
             butsecurity.Margin = new Padding(2);
             butsecurity.Name = "butsecurity";
             butsecurity.Size = new Size(209, 27);
@@ -84,7 +84,7 @@
             // butsystem
             // 
             butsystem.BackColor = Color.FromArgb(110, 172, 218);
-            butsystem.Location = new Point(7, 353);
+            butsystem.Location = new Point(7, 442);
             butsystem.Margin = new Padding(2);
             butsystem.Name = "butsystem";
             butsystem.Size = new Size(209, 27);
@@ -203,7 +203,7 @@
             dataproject.Margin = new Padding(2);
             dataproject.Name = "dataproject";
             dataproject.RowHeadersWidth = 62;
-            dataproject.Size = new Size(572, 290);
+            dataproject.Size = new Size(786, 396);
             dataproject.TabIndex = 1;
             dataproject.CellContentClick += dataproject_CellContentClick;
             // 
@@ -224,7 +224,7 @@
             // 
             AutoScaleDimensions = new SizeF(96F, 96F);
             AutoScaleMode = AutoScaleMode.Dpi;
-            ClientSize = new Size(823, 423);
+            ClientSize = new Size(1041, 524);
             Controls.Add(label4);
             Controls.Add(dataproject);
             Controls.Add(panel1);
