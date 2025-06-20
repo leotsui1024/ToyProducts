@@ -177,7 +177,7 @@ namespace ToyProducts
             panel1.Controls.Add(label4);
             panel1.Controls.Add(label5);
             panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(2, 2, 2, 2);
+            panel1.Margin = new Padding(2);
             panel1.Name = "panel1";
             panel1.Size = new Size(226, 451);
             panel1.TabIndex = 34;
@@ -186,7 +186,7 @@ namespace ToyProducts
             // 
             butsecurity.BackColor = Color.FromArgb(110, 172, 218);
             butsecurity.Location = new Point(6, 374);
-            butsecurity.Margin = new Padding(2, 2, 2, 2);
+            butsecurity.Margin = new Padding(2);
             butsecurity.Name = "butsecurity";
             butsecurity.Size = new Size(200, 26);
             butsecurity.TabIndex = 9;
@@ -196,8 +196,9 @@ namespace ToyProducts
             // butsystem
             // 
             butsystem.BackColor = Color.FromArgb(110, 172, 218);
+            butsystem.FlatStyle = FlatStyle.System;
             butsystem.Location = new Point(6, 346);
-            butsystem.Margin = new Padding(2, 2, 2, 2);
+            butsystem.Margin = new Padding(2);
             butsystem.Name = "butsystem";
             butsystem.Size = new Size(200, 26);
             butsystem.TabIndex = 8;
@@ -208,7 +209,7 @@ namespace ToyProducts
             // 
             butinventory.BackColor = Color.FromArgb(110, 172, 218);
             butinventory.Location = new Point(6, 254);
-            butinventory.Margin = new Padding(2, 2, 2, 2);
+            butinventory.Margin = new Padding(2);
             butinventory.Name = "butinventory";
             butinventory.Size = new Size(200, 43);
             butinventory.TabIndex = 7;
@@ -219,7 +220,7 @@ namespace ToyProducts
             // 
             butproject.BackColor = Color.FromArgb(110, 172, 218);
             butproject.Location = new Point(6, 209);
-            butproject.Margin = new Padding(2, 2, 2, 2);
+            butproject.Margin = new Padding(2);
             butproject.Name = "butproject";
             butproject.Size = new Size(200, 43);
             butproject.TabIndex = 6;
@@ -230,7 +231,7 @@ namespace ToyProducts
             // 
             butsales.BackColor = Color.FromArgb(110, 172, 218);
             butsales.Location = new Point(6, 163);
-            butsales.Margin = new Padding(2, 2, 2, 2);
+            butsales.Margin = new Padding(2);
             butsales.Name = "butsales";
             butsales.Size = new Size(200, 43);
             butsales.TabIndex = 5;
@@ -241,7 +242,7 @@ namespace ToyProducts
             // 
             butproduct.BackColor = Color.FromArgb(110, 172, 218);
             butproduct.Location = new Point(6, 117);
-            butproduct.Margin = new Padding(2, 2, 2, 2);
+            butproduct.Margin = new Padding(2);
             butproduct.Name = "butproduct";
             butproduct.Size = new Size(200, 43);
             butproduct.TabIndex = 1;
@@ -253,7 +254,7 @@ namespace ToyProducts
             dataGridView1.BackgroundColor = Color.FromArgb(110, 172, 218);
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(69, 59);
-            dataGridView1.Margin = new Padding(2, 2, 2, 2);
+            dataGridView1.Margin = new Padding(2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.Size = new Size(134, 26);
@@ -264,7 +265,7 @@ namespace ToyProducts
             name.BackgroundColor = Color.FromArgb(110, 172, 218);
             name.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             name.Location = new Point(69, 33);
-            name.Margin = new Padding(2, 2, 2, 2);
+            name.Margin = new Padding(2);
             name.Name = "name";
             name.RowHeadersWidth = 62;
             name.Size = new Size(134, 26);
@@ -322,7 +323,7 @@ namespace ToyProducts
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
             Controls.Add(label3);
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             MaximizeBox = false;
             Name = "NewPassword";
             Text = "Change password";
