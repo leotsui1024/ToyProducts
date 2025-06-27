@@ -103,5 +103,10 @@ namespace ToyProducts
         {
 
         }
+
+        private void txtUserID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

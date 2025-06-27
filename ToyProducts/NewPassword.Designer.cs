@@ -117,6 +117,7 @@ namespace ToyProducts
             txtUserID.Name = "txtUserID";
             txtUserID.Size = new Size(229, 23);
             txtUserID.TabIndex = 28;
+            txtUserID.TextChanged += txtUserID_TextChanged;
             // 
             // label7
             // 
