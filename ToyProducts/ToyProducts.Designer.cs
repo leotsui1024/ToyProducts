@@ -33,12 +33,12 @@ namespace ToyProducts
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            butsecurity = new Button();
-            butsystem = new Button();
-            butinventory = new Button();
-            butproject = new Button();
-            butsales = new Button();
-            butproduct = new Button();
+            btnAccountControl = new Button();
+            btnsystem = new Button();
+            btninventory = new Button();
+            btnproject = new Button();
+            btnsales = new Button();
+            btnproduct = new Button();
             dataGridView1 = new DataGridView();
             name = new DataGridView();
             label3 = new Label();
@@ -90,12 +90,12 @@ namespace ToyProducts
             // 
             panel1.BackColor = Color.FromArgb(3, 52, 110);
             panel1.BorderStyle = BorderStyle.FixedSingle;
-            panel1.Controls.Add(butsecurity);
-            panel1.Controls.Add(butsystem);
-            panel1.Controls.Add(butinventory);
-            panel1.Controls.Add(butproject);
-            panel1.Controls.Add(butsales);
-            panel1.Controls.Add(butproduct);
+            panel1.Controls.Add(btnAccountControl);
+            panel1.Controls.Add(btnsystem);
+            panel1.Controls.Add(btninventory);
+            panel1.Controls.Add(btnproject);
+            panel1.Controls.Add(btnsales);
+            panel1.Controls.Add(btnproduct);
             panel1.Controls.Add(dataGridView1);
             panel1.Controls.Add(name);
             panel1.Controls.Add(label3);
@@ -108,73 +108,80 @@ namespace ToyProducts
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
             // 
-            // butsecurity
+            // btnAccountControl
             // 
-            butsecurity.BackColor = Color.FromArgb(110, 172, 218);
-            butsecurity.Location = new Point(7, 473);
-            butsecurity.Margin = new Padding(2);
-            butsecurity.Name = "butsecurity";
-            butsecurity.Size = new Size(209, 27);
-            butsecurity.TabIndex = 9;
-            butsecurity.Text = "Security Control";
-            butsecurity.UseVisualStyleBackColor = false;
+            btnAccountControl.BackColor = Color.FromArgb(110, 172, 218);
+            btnAccountControl.Font = new Font("Arial Unicode MS", 9F);
+            btnAccountControl.Location = new Point(7, 473);
+            btnAccountControl.Margin = new Padding(2);
+            btnAccountControl.Name = "btnAccountControl";
+            btnAccountControl.Size = new Size(209, 27);
+            btnAccountControl.TabIndex = 9;
+            btnAccountControl.Text = "Account Control";
+            btnAccountControl.UseVisualStyleBackColor = false;
+            btnAccountControl.Click += btnAccountControl_Click;
             // 
-            // butsystem
+            // btnsystem
             // 
-            butsystem.BackColor = Color.FromArgb(110, 172, 218);
-            butsystem.Location = new Point(7, 442);
-            butsystem.Margin = new Padding(2);
-            butsystem.Name = "butsystem";
-            butsystem.Size = new Size(209, 27);
-            butsystem.TabIndex = 8;
-            butsystem.Text = "System Maintenance";
-            butsystem.UseVisualStyleBackColor = false;
+            btnsystem.BackColor = Color.FromArgb(110, 172, 218);
+            btnsystem.Font = new Font("Arial Unicode MS", 9F);
+            btnsystem.Location = new Point(7, 442);
+            btnsystem.Margin = new Padding(2);
+            btnsystem.Name = "btnsystem";
+            btnsystem.Size = new Size(209, 27);
+            btnsystem.TabIndex = 8;
+            btnsystem.Text = "System Maintenance";
+            btnsystem.UseVisualStyleBackColor = false;
             // 
-            // butinventory
+            // btninventory
             // 
-            butinventory.BackColor = Color.FromArgb(110, 172, 218);
-            butinventory.Location = new Point(7, 260);
-            butinventory.Margin = new Padding(2);
-            butinventory.Name = "butinventory";
-            butinventory.Size = new Size(209, 44);
-            butinventory.TabIndex = 7;
-            butinventory.Text = "Inventory Control";
-            butinventory.UseVisualStyleBackColor = false;
+            btninventory.BackColor = Color.FromArgb(110, 172, 218);
+            btninventory.Font = new Font("Arial Unicode MS", 9F);
+            btninventory.Location = new Point(7, 260);
+            btninventory.Margin = new Padding(2);
+            btninventory.Name = "btninventory";
+            btninventory.Size = new Size(209, 44);
+            btninventory.TabIndex = 7;
+            btninventory.Text = "Inventory Control";
+            btninventory.UseVisualStyleBackColor = false;
             // 
-            // butproject
+            // btnproject
             // 
-            butproject.BackColor = Color.FromArgb(110, 172, 218);
-            butproject.FlatStyle = FlatStyle.System;
-            butproject.Location = new Point(7, 213);
-            butproject.Margin = new Padding(2);
-            butproject.Name = "butproject";
-            butproject.Size = new Size(209, 44);
-            butproject.TabIndex = 6;
-            butproject.Text = "Project Management";
-            butproject.UseVisualStyleBackColor = false;
+            btnproject.BackColor = Color.FromArgb(110, 172, 218);
+            btnproject.FlatStyle = FlatStyle.System;
+            btnproject.Font = new Font("Arial Unicode MS", 9F);
+            btnproject.Location = new Point(7, 213);
+            btnproject.Margin = new Padding(2);
+            btnproject.Name = "btnproject";
+            btnproject.Size = new Size(209, 44);
+            btnproject.TabIndex = 6;
+            btnproject.Text = "Project Management";
+            btnproject.UseVisualStyleBackColor = false;
             // 
-            // butsales
+            // btnsales
             // 
-            butsales.BackColor = Color.FromArgb(110, 172, 218);
-            butsales.Location = new Point(7, 167);
-            butsales.Margin = new Padding(2);
-            butsales.Name = "butsales";
-            butsales.Size = new Size(209, 44);
-            butsales.TabIndex = 5;
-            butsales.Text = "Sales Order Management";
-            butsales.UseVisualStyleBackColor = false;
+            btnsales.BackColor = Color.FromArgb(110, 172, 218);
+            btnsales.Font = new Font("Arial Unicode MS", 9F);
+            btnsales.Location = new Point(7, 167);
+            btnsales.Margin = new Padding(2);
+            btnsales.Name = "btnsales";
+            btnsales.Size = new Size(209, 44);
+            btnsales.TabIndex = 5;
+            btnsales.Text = "Sales Order Management";
+            btnsales.UseVisualStyleBackColor = false;
             // 
-            // butproduct
+            // btnproduct
             // 
-            butproduct.BackColor = Color.FromArgb(110, 172, 218);
-            butproduct.Location = new Point(7, 120);
-            butproduct.Margin = new Padding(2);
-            butproduct.Name = "butproduct";
-            butproduct.Size = new Size(209, 44);
-            butproduct.TabIndex = 1;
-            butproduct.Text = "Product Specification Management";
-            butproduct.UseVisualStyleBackColor = false;
-            butproduct.Click += butproduct_Click;
+            btnproduct.BackColor = Color.FromArgb(110, 172, 218);
+            btnproduct.Font = new Font("Arial Unicode MS", 9F);
+            btnproduct.Location = new Point(7, 120);
+            btnproduct.Margin = new Padding(2);
+            btnproduct.Name = "btnproduct";
+            btnproduct.Size = new Size(209, 44);
+            btnproduct.TabIndex = 1;
+            btnproduct.Text = "Product Specification Management";
+            btnproduct.UseVisualStyleBackColor = false;
+            btnproduct.Click += btnproduct_Click;
             // 
             // dataGridView1
             // 
@@ -606,12 +613,12 @@ namespace ToyProducts
         private DataGridView name;
         private Label label3;
         private DataGridView dataGridView1;
-        private Button butproduct;
-        private Button butsales;
-        private Button butinventory;
-        private Button butproject;
-        private Button butsecurity;
-        private Button butsystem;
+        private Button btnproduct;
+        private Button btnsales;
+        private Button btninventory;
+        private Button btnproject;
+        private Button btnAccountControl;
+        private Button btnsystem;
         private DataGridView dataproject;
         private Label label4;
         private Label PID;

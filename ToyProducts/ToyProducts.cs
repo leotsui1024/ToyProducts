@@ -74,7 +74,7 @@ namespace ToyProducts
         {
             LoadProductData();
 
-            
+
         }
 
         private void cboID_SelectedIndexChanged(object sender, EventArgs e)
@@ -92,7 +92,7 @@ namespace ToyProducts
 
         private void label2_Click(object sender, EventArgs e) { }
 
-        private void butproduct_Click(object sender, EventArgs e) { }
+        private void btnproduct_Click(object sender, EventArgs e) { }
 
         private void dataproject_CellContentClick(object sender, DataGridViewCellEventArgs e) { }
 
@@ -255,5 +255,11 @@ namespace ToyProducts
             }
         }
 
+        private void btnAccountControl_Click(object sender, EventArgs e)
+        {
+            AccountControl accountControl = new AccountControl();
+
+            accountControl.ShowDialog();
+        }
     }
 }
