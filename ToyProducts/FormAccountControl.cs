@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace ToyProducts
 {
-    public partial class AccountControl : Form
+    public partial class FormAccountControl : Form
     {
         OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=ITP4915M.accdb");
 
-        public AccountControl()
+        public FormAccountControl()
         {
             InitializeComponent();
         }
@@ -110,6 +110,11 @@ namespace ToyProducts
         }
 
         private void txtUserID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AccountControl_Load(object sender, EventArgs e)
         {
 
         }

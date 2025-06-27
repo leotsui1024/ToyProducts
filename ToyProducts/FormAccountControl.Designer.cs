@@ -1,6 +1,6 @@
 ﻿namespace ToyProducts
 {
-    partial class AccountControl
+    partial class FormAccountControl
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AccountControl));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAccountControl));
             buttonLogin = new Button();
             txtConfirmPassword = new TextBox();
             label9 = new Label();
@@ -39,6 +39,7 @@
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
             label3 = new Label();
+            panel1 = new Panel();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -68,6 +69,7 @@
             // label9
             // 
             label9.AutoSize = true;
+            label9.BackColor = Color.White;
             label9.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 136);
             label9.Location = new Point(250, 234);
             label9.Name = "label9";
@@ -85,6 +87,7 @@
             // label8
             // 
             label8.AutoSize = true;
+            label8.BackColor = Color.White;
             label8.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 136);
             label8.Location = new Point(250, 181);
             label8.Name = "label8";
@@ -103,6 +106,7 @@
             // label7
             // 
             label7.AutoSize = true;
+            label7.BackColor = Color.White;
             label7.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 136);
             label7.Location = new Point(250, 120);
             label7.Name = "label7";
@@ -112,6 +116,7 @@
             // 
             // pictureBox2
             // 
+            pictureBox2.BackColor = Color.White;
             pictureBox2.ErrorImage = null;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
             pictureBox2.Location = new Point(16, 120);
@@ -135,6 +140,7 @@
             // label3
             // 
             label3.AutoSize = true;
+            label3.BackColor = Color.White;
             label3.Font = new Font("Tahoma", 16F, FontStyle.Bold);
             label3.ForeColor = SystemColors.ControlText;
             label3.Location = new Point(103, 17);
@@ -142,6 +148,16 @@
             label3.Size = new Size(191, 27);
             label3.TabIndex = 34;
             label3.Text = "Account Control";
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.White;
+            panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Dock = DockStyle.Fill;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(499, 391);
+            panel1.TabIndex = 44;
             // 
             // AccountControl
             // 
@@ -158,8 +174,10 @@
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
             Controls.Add(label3);
+            Controls.Add(panel1);
             Name = "AccountControl";
             Text = "AccountControl";
+            Load += AccountControl_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
@@ -178,5 +196,6 @@
         private PictureBox pictureBox2;
         private PictureBox pictureBox1;
         private Label label3;
+        private Panel panel1;
     }
 }

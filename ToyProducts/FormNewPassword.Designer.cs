@@ -2,7 +2,7 @@
 
 namespace ToyProducts
 {
-    partial class NewPassword
+    partial class FormNewPassword
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@ namespace ToyProducts
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewPassword));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormNewPassword));
             buttonLogin = new Button();
             txtConfirmPassword = new TextBox();
             label9 = new Label();

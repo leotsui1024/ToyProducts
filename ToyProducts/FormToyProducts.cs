@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace ToyProducts
 {
-    public partial class ToyProducts : Form
+    public partial class FormToyProducts : Form
     {
         // local cache of the rows we need 暫存從資料庫抓出的書籍資料的表格
         private readonly DataTable dt = new DataTable();
@@ -17,7 +17,7 @@ namespace ToyProducts
         private string dbPath;
         private OleDbConnection con;
 
-        public ToyProducts()
+        public FormToyProducts()
         {
             InitializeComponent();
             dbPath = Path.Combine(Application.StartupPath, "ITP4915M.accdb");
@@ -257,9 +257,30 @@ namespace ToyProducts
 
         private void btnAccountControl_Click(object sender, EventArgs e)
         {
-            AccountControl accountControl = new AccountControl();
+            FormAccountControl accountControl = new FormAccountControl();
 
             accountControl.ShowDialog();
+        }
+
+        private void btnsystemMaintenance_Click(object sender, EventArgs e)
+        {
+            FormSystemMaintenance systemMaintenance = new FormSystemMaintenance();
+            systemMaintenance.ShowDialog();
+        }
+
+        private void btninventory_Click(object sender, EventArgs e)
+        {
+            DropFormInventoryControl inventoryControl = new DropFormInventoryControl();
+            inventoryControl.Show();
+            this.Hide();
+        }
+        private void btnsales_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void btnproject_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

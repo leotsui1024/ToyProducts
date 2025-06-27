@@ -6,11 +6,11 @@ using System.Windows.Forms;
 
 namespace ToyProducts
 {
-    public partial class NewPassword : Form
+    public partial class FormNewPassword : Form
     {
         OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=ITP4915M.accdb");
 
-        public NewPassword()
+        public FormNewPassword()
         {
             InitializeComponent();
         }
