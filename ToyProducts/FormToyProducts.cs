@@ -270,7 +270,8 @@ namespace ToyProducts
 
         private void btninventory_Click(object sender, EventArgs e)
         {
-            DropFormInventoryControl inventoryControl = new DropFormInventoryControl();
+            FormInventoryControl inventoryControl = new FormInventoryControl();
+
             inventoryControl.Show();
             this.Hide();
         }
@@ -282,5 +283,10 @@ namespace ToyProducts
         {
 
         }
+        private void txtUserID_TextChanged(object sender, EventArgs e)
+        {
+            // 例如：動態檢查帳號是否合法
+        }
+
     }
 }

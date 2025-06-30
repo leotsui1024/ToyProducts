@@ -21,7 +21,7 @@ namespace ToyProducts
         }
 
         // 👉 登入按鈕事件
-        private void buttonLogin_Click_1(object sender, EventArgs e)
+        private void buttonLogin_Click(object sender, EventArgs e)
         {
             string userID = txtUserID.Text.Trim();
             string newPassword = txtNewPassword.Text;

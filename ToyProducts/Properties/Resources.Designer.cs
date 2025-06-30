@@ -10,8 +10,9 @@
 
 namespace ToyProducts.Properties {
     using System;
-    
-    
+    using System.Drawing;
+
+
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -23,7 +24,9 @@ namespace ToyProducts.Properties {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
-        
+        internal static readonly Image icons8_maintenance_64;
+        internal static readonly Image icons8_backup_100;
+        internal static readonly Image user;
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
@@ -86,36 +89,6 @@ namespace ToyProducts.Properties {
         internal static System.Drawing.Bitmap _6195699 {
             get {
                 object obj = ResourceManager.GetObject("6195699", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_backup_100 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-backup-100", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_maintenance_64 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-maintenance-64", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_maintenance_641 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-maintenance-641", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
