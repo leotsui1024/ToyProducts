@@ -5,7 +5,7 @@ namespace ToyProducts
 {
     partial class FormToyProducts
     {
-       // private System.Windows.Forms.TextBox textPCat;
+        // private System.Windows.Forms.TextBox textPCat;
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -33,14 +33,14 @@ namespace ToyProducts
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            txtStaffID = new TextBox();
+            txtStaffName = new TextBox();
             btnAccountControl = new Button();
             btnsystemManitenance = new Button();
             btninventory = new Button();
             btnproject = new Button();
             btnsales = new Button();
             btnproduct = new Button();
-            dataGridView1 = new DataGridView();
-            name = new DataGridView();
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
@@ -79,8 +79,6 @@ namespace ToyProducts
             btnRefresh = new Button();
             panel5 = new Panel();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)name).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataproject).BeginInit();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
@@ -92,35 +90,48 @@ namespace ToyProducts
             // 
             panel1.BackColor = Color.FromArgb(3, 52, 110);
             panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(txtStaffID);
+            panel1.Controls.Add(txtStaffName);
             panel1.Controls.Add(btnAccountControl);
             panel1.Controls.Add(btnsystemManitenance);
             panel1.Controls.Add(btninventory);
             panel1.Controls.Add(btnproject);
             panel1.Controls.Add(btnsales);
             panel1.Controls.Add(btnproduct);
-            panel1.Controls.Add(dataGridView1);
-            panel1.Controls.Add(name);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(231, 531);
+            panel1.Size = new Size(346, 796);
             panel1.TabIndex = 0;
-            panel1.Paint += panel1_Paint;
+            // 
+            // txtStaffID
+            // 
+            txtStaffID.Location = new Point(104, 101);
+            txtStaffID.Name = "txtStaffID";
+            txtStaffID.ReadOnly = true;
+            txtStaffID.Size = new Size(220, 30);
+            txtStaffID.TabIndex = 40;
+            // 
+            // txtStaffName
+            // 
+            txtStaffName.Location = new Point(104, 54);
+            txtStaffName.Name = "txtStaffName";
+            txtStaffName.ReadOnly = true;
+            txtStaffName.Size = new Size(220, 30);
+            txtStaffName.TabIndex = 39;
             // 
             // btnAccountControl
             // 
             btnAccountControl.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             btnAccountControl.AutoSize = true;
             btnAccountControl.BackColor = Color.FromArgb(110, 172, 218);
-            btnAccountControl.Font = new Font("Arial Unicode MS", 9F);
-            btnAccountControl.Location = new Point(7, 492);
-            btnAccountControl.Margin = new Padding(2);
+            btnAccountControl.Font = new Font("Microsoft Sans Serif", 9F);
+            btnAccountControl.Location = new Point(10, 730);
             btnAccountControl.Name = "btnAccountControl";
-            btnAccountControl.Size = new Size(209, 27);
+            btnAccountControl.Size = new Size(314, 48);
             btnAccountControl.TabIndex = 9;
             btnAccountControl.Text = "Account Control";
             btnAccountControl.UseVisualStyleBackColor = false;
@@ -131,11 +142,10 @@ namespace ToyProducts
             btnsystemManitenance.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             btnsystemManitenance.AutoSize = true;
             btnsystemManitenance.BackColor = Color.FromArgb(110, 172, 218);
-            btnsystemManitenance.Font = new Font("Arial Unicode MS", 9F);
-            btnsystemManitenance.Location = new Point(7, 461);
-            btnsystemManitenance.Margin = new Padding(2);
+            btnsystemManitenance.Font = new Font("Microsoft Sans Serif", 9F);
+            btnsystemManitenance.Location = new Point(10, 684);
             btnsystemManitenance.Name = "btnsystemManitenance";
-            btnsystemManitenance.Size = new Size(209, 27);
+            btnsystemManitenance.Size = new Size(314, 48);
             btnsystemManitenance.TabIndex = 8;
             btnsystemManitenance.Text = "System Maintenance";
             btnsystemManitenance.UseVisualStyleBackColor = false;
@@ -145,11 +155,10 @@ namespace ToyProducts
             // 
             btninventory.AutoSize = true;
             btninventory.BackColor = Color.FromArgb(110, 172, 218);
-            btninventory.Font = new Font("Arial Unicode MS", 9F);
-            btninventory.Location = new Point(7, 260);
-            btninventory.Margin = new Padding(2);
+            btninventory.Font = new Font("Microsoft Sans Serif", 9F);
+            btninventory.Location = new Point(10, 390);
             btninventory.Name = "btninventory";
-            btninventory.Size = new Size(209, 44);
+            btninventory.Size = new Size(314, 66);
             btninventory.TabIndex = 7;
             btninventory.Text = "Inventory Control";
             btninventory.UseVisualStyleBackColor = false;
@@ -159,11 +168,10 @@ namespace ToyProducts
             // 
             btnproject.AutoSize = true;
             btnproject.BackColor = Color.White;
-            btnproject.Font = new Font("Arial Unicode MS", 9F);
-            btnproject.Location = new Point(7, 117);
-            btnproject.Margin = new Padding(2);
+            btnproject.Font = new Font("Microsoft Sans Serif", 9F);
+            btnproject.Location = new Point(10, 176);
             btnproject.Name = "btnproject";
-            btnproject.Size = new Size(209, 44);
+            btnproject.Size = new Size(314, 66);
             btnproject.TabIndex = 6;
             btnproject.Text = "Project Management";
             btnproject.UseVisualStyleBackColor = false;
@@ -173,11 +181,10 @@ namespace ToyProducts
             // 
             btnsales.AutoSize = true;
             btnsales.BackColor = Color.FromArgb(110, 172, 218);
-            btnsales.Font = new Font("Arial Unicode MS", 9F);
-            btnsales.Location = new Point(7, 212);
-            btnsales.Margin = new Padding(2);
+            btnsales.Font = new Font("Microsoft Sans Serif", 9F);
+            btnsales.Location = new Point(10, 318);
             btnsales.Name = "btnsales";
-            btnsales.Size = new Size(209, 44);
+            btnsales.Size = new Size(336, 66);
             btnsales.TabIndex = 5;
             btnsales.Text = "Sales Order Management";
             btnsales.UseVisualStyleBackColor = false;
@@ -187,47 +194,22 @@ namespace ToyProducts
             // 
             btnproduct.AutoSize = true;
             btnproduct.BackColor = Color.FromArgb(110, 172, 218);
-            btnproduct.Font = new Font("Arial Unicode MS", 9F);
-            btnproduct.Location = new Point(7, 165);
-            btnproduct.Margin = new Padding(2);
+            btnproduct.Font = new Font("Microsoft Sans Serif", 9F);
+            btnproduct.Location = new Point(10, 248);
             btnproduct.Name = "btnproduct";
-            btnproduct.Size = new Size(209, 44);
+            btnproduct.Size = new Size(446, 66);
             btnproduct.TabIndex = 1;
             btnproduct.Text = "Product Specification Management";
             btnproduct.UseVisualStyleBackColor = false;
-            btnproduct.Click += btnproduct_Click;
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.BackgroundColor = Color.FromArgb(110, 172, 218);
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(72, 60);
-            dataGridView1.Margin = new Padding(2);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(140, 27);
-            dataGridView1.TabIndex = 4;
-            // 
-            // name
-            // 
-            name.BackgroundColor = Color.FromArgb(110, 172, 218);
-            name.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            name.Location = new Point(72, 33);
-            name.Margin = new Padding(2);
-            name.Name = "name";
-            name.RowHeadersWidth = 62;
-            name.Size = new Size(140, 27);
-            name.TabIndex = 1;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Tahoma", 12F, FontStyle.Bold);
             label3.ForeColor = SystemColors.Control;
-            label3.Location = new Point(33, 60);
-            label3.Margin = new Padding(2, 0, 2, 0);
+            label3.Location = new Point(50, 90);
             label3.Name = "label3";
-            label3.Size = new Size(34, 19);
+            label3.Size = new Size(52, 29);
             label3.TabIndex = 3;
             label3.Text = "ID:";
             // 
@@ -236,23 +218,20 @@ namespace ToyProducts
             label2.AutoSize = true;
             label2.Font = new Font("Tahoma", 12F, FontStyle.Bold);
             label2.ForeColor = SystemColors.Control;
-            label2.Location = new Point(7, 33);
-            label2.Margin = new Padding(2, 0, 2, 0);
+            label2.Location = new Point(10, 50);
             label2.Name = "label2";
-            label2.Size = new Size(62, 19);
+            label2.Size = new Size(92, 29);
             label2.TabIndex = 2;
             label2.Text = "Name:";
-            label2.Click += label2_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Tahoma", 12F, FontStyle.Bold);
             label1.ForeColor = SystemColors.Control;
-            label1.Location = new Point(7, 6);
-            label1.Margin = new Padding(2, 0, 2, 0);
+            label1.Location = new Point(10, 9);
             label1.Name = "label1";
-            label1.Size = new Size(88, 19);
+            label1.Size = new Size(132, 29);
             label1.TabIndex = 1;
             label1.Text = "Welcome!";
             // 
@@ -260,13 +239,11 @@ namespace ToyProducts
             // 
             dataproject.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataproject.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataproject.Location = new Point(235, 120);
-            dataproject.Margin = new Padding(2);
+            dataproject.Location = new Point(352, 180);
             dataproject.Name = "dataproject";
             dataproject.RowHeadersWidth = 62;
-            dataproject.Size = new Size(913, 400);
+            dataproject.Size = new Size(1370, 600);
             dataproject.TabIndex = 1;
-            dataproject.CellContentClick += dataproject_CellContentClick;
             // 
             // label4
             // 
@@ -274,10 +251,9 @@ namespace ToyProducts
             label4.BackColor = Color.White;
             label4.Font = new Font("Tahoma", 12F, FontStyle.Bold);
             label4.ForeColor = SystemColors.ActiveCaptionText;
-            label4.Location = new Point(243, 7);
-            label4.Margin = new Padding(2, 0, 2, 0);
+            label4.Location = new Point(364, 10);
             label4.Name = "label4";
-            label4.Size = new Size(179, 19);
+            label4.Size = new Size(262, 29);
             label4.TabIndex = 10;
             label4.Text = "Project Management";
             // 
@@ -285,76 +261,85 @@ namespace ToyProducts
             // 
             PID.AutoSize = true;
             PID.Font = new Font("Tahoma", 12F, FontStyle.Bold);
-            PID.Location = new Point(95, 32);
+            PID.Location = new Point(142, 48);
+            PID.Margin = new Padding(4, 0, 4, 0);
             PID.Name = "PID";
-            PID.Size = new Size(28, 19);
+            PID.Size = new Size(43, 29);
             PID.TabIndex = 11;
             PID.Text = "ID";
             // 
             // textNName
             // 
-            textNName.Location = new Point(129, 31);
+            textNName.Location = new Point(194, 46);
+            textNName.Margin = new Padding(4);
             textNName.Name = "textNName";
-            textNName.Size = new Size(132, 23);
+            textNName.Size = new Size(196, 30);
             textNName.TabIndex = 16;
             // 
             // PName
             // 
             PName.AutoSize = true;
             PName.Font = new Font("Tahoma", 12F, FontStyle.Bold);
-            PName.Location = new Point(67, 4);
+            PName.Location = new Point(100, 6);
+            PName.Margin = new Padding(4, 0, 4, 0);
             PName.Name = "PName";
-            PName.Size = new Size(56, 19);
+            PName.Size = new Size(83, 29);
             PName.TabIndex = 14;
             PName.Text = "Name";
             // 
             // textNost
             // 
-            textNost.Location = new Point(60, 31);
+            textNost.Location = new Point(90, 46);
+            textNost.Margin = new Padding(4);
             textNost.Name = "textNost";
-            textNost.Size = new Size(45, 23);
+            textNost.Size = new Size(66, 30);
             textNost.TabIndex = 19;
             // 
             // textCost
             // 
-            textCost.Location = new Point(60, 3);
+            textCost.Location = new Point(90, 4);
+            textCost.Margin = new Padding(4);
             textCost.Name = "textCost";
             textCost.ReadOnly = true;
-            textCost.Size = new Size(45, 23);
+            textCost.Size = new Size(66, 30);
             textCost.TabIndex = 18;
             // 
             // PCost
             // 
             PCost.AutoSize = true;
             PCost.Font = new Font("Tahoma", 12F, FontStyle.Bold);
-            PCost.Location = new Point(9, 8);
+            PCost.Location = new Point(14, 12);
+            PCost.Margin = new Padding(4, 0, 4, 0);
             PCost.Name = "PCost";
-            PCost.Size = new Size(45, 19);
+            PCost.Size = new Size(66, 29);
             PCost.TabIndex = 17;
             PCost.Text = "Cost";
             // 
             // textNPrice
             // 
-            textNPrice.Location = new Point(167, 31);
+            textNPrice.Location = new Point(250, 46);
+            textNPrice.Margin = new Padding(4);
             textNPrice.Name = "textNPrice";
-            textNPrice.Size = new Size(45, 23);
+            textNPrice.Size = new Size(66, 30);
             textNPrice.TabIndex = 22;
             // 
             // textPrice
             // 
-            textPrice.Location = new Point(167, 3);
+            textPrice.Location = new Point(250, 4);
+            textPrice.Margin = new Padding(4);
             textPrice.Name = "textPrice";
             textPrice.ReadOnly = true;
-            textPrice.Size = new Size(45, 23);
+            textPrice.Size = new Size(66, 30);
             textPrice.TabIndex = 21;
             // 
             // PPrice
             // 
             PPrice.AutoSize = true;
             PPrice.Font = new Font("Tahoma", 12F, FontStyle.Bold);
-            PPrice.Location = new Point(111, 7);
+            PPrice.Location = new Point(166, 10);
+            PPrice.Margin = new Padding(4, 0, 4, 0);
             PPrice.Name = "PPrice";
-            PPrice.Size = new Size(50, 19);
+            PPrice.Size = new Size(73, 29);
             PPrice.TabIndex = 20;
             PPrice.Text = "Price";
             // 
@@ -362,61 +347,67 @@ namespace ToyProducts
             // 
             PQty.AutoSize = true;
             PQty.Font = new Font("Tahoma", 12F, FontStyle.Bold);
-            PQty.Location = new Point(218, 7);
+            PQty.Location = new Point(327, 10);
+            PQty.Margin = new Padding(4, 0, 4, 0);
             PQty.Name = "PQty";
-            PQty.Size = new Size(37, 19);
+            PQty.Size = new Size(55, 29);
             PQty.TabIndex = 23;
             PQty.Text = "Qty";
             // 
             // textQty
             // 
-            textQty.Location = new Point(261, 3);
+            textQty.Location = new Point(392, 4);
+            textQty.Margin = new Padding(4);
             textQty.Name = "textQty";
             textQty.ReadOnly = true;
-            textQty.Size = new Size(45, 23);
+            textQty.Size = new Size(66, 30);
             textQty.TabIndex = 24;
             // 
             // textNQty
             // 
-            textNQty.Location = new Point(261, 31);
+            textNQty.Location = new Point(392, 46);
+            textNQty.Margin = new Padding(4);
             textNQty.Name = "textNQty";
-            textNQty.Size = new Size(45, 23);
+            textNQty.Size = new Size(66, 30);
             textNQty.TabIndex = 29;
             // 
             // textPCat
             // 
-            textPCat.Location = new Point(90, 4);
+            textPCat.Location = new Point(135, 6);
+            textPCat.Margin = new Padding(4);
             textPCat.Name = "textPCat";
             textPCat.ReadOnly = true;
-            textPCat.Size = new Size(45, 23);
+            textPCat.Size = new Size(66, 30);
             textPCat.TabIndex = 31;
             // 
             // PCat
             // 
             PCat.AutoSize = true;
             PCat.Font = new Font("Tahoma", 12F, FontStyle.Bold);
-            PCat.Location = new Point(1, 4);
+            PCat.Location = new Point(2, 6);
+            PCat.Margin = new Padding(4, 0, 4, 0);
             PCat.Name = "PCat";
-            PCat.Size = new Size(83, 19);
+            PCat.Size = new Size(121, 29);
             PCat.TabIndex = 30;
             PCat.Text = "Category";
             // 
             // textPStat
             // 
-            textPStat.Location = new Point(217, 4);
+            textPStat.Location = new Point(326, 6);
+            textPStat.Margin = new Padding(4);
             textPStat.Name = "textPStat";
             textPStat.ReadOnly = true;
-            textPStat.Size = new Size(45, 23);
+            textPStat.Size = new Size(66, 30);
             textPStat.TabIndex = 33;
-            textPStat.TextChanged += textPStat_TextChanged;
             // 
             // PStat
             // 
             PStat.AutoSize = true;
             PStat.Font = new Font("Tahoma", 12F, FontStyle.Bold);
-            PStat.Location = new Point(141, 4);
+            PStat.Location = new Point(212, 6);
+            PStat.Margin = new Padding(4, 0, 4, 0);
             PStat.Name = "PStat";
-            PStat.Size = new Size(61, 19);
+            PStat.Size = new Size(89, 29);
             PStat.TabIndex = 32;
             PStat.Text = "Status";
             // 
@@ -424,9 +415,10 @@ namespace ToyProducts
             // 
             cboNPCat.FormattingEnabled = true;
             cboNPCat.Items.AddRange(new object[] { "Toy", "Plush", "Model", "Vehicle", "Construction", "Other" });
-            cboNPCat.Location = new Point(14, 31);
+            cboNPCat.Location = new Point(21, 46);
+            cboNPCat.Margin = new Padding(4);
             cboNPCat.Name = "cboNPCat";
-            cboNPCat.Size = new Size(121, 23);
+            cboNPCat.Size = new Size(180, 31);
             cboNPCat.TabIndex = 34;
             cboNPCat.Text = "Toy";
             // 
@@ -434,9 +426,10 @@ namespace ToyProducts
             // 
             cboNPStat.FormattingEnabled = true;
             cboNPStat.Items.AddRange(new object[] { "Active", "Inactive" });
-            cboNPStat.Location = new Point(141, 31);
+            cboNPStat.Location = new Point(212, 46);
+            cboNPStat.Margin = new Padding(4);
             cboNPStat.Name = "cboNPStat";
-            cboNPStat.Size = new Size(121, 23);
+            cboNPStat.Size = new Size(180, 31);
             cboNPStat.TabIndex = 35;
             cboNPStat.Text = "Active";
             // 
@@ -448,24 +441,27 @@ namespace ToyProducts
             panel2.Controls.Add(PID);
             panel2.Controls.Add(PName);
             panel2.Controls.Add(textNName);
-            panel2.Location = new Point(13, 29);
+            panel2.Location = new Point(20, 44);
+            panel2.Margin = new Padding(4);
             panel2.Name = "panel2";
-            panel2.Size = new Size(274, 60);
+            panel2.Size = new Size(411, 90);
             panel2.TabIndex = 10;
             // 
             // textName
             // 
-            textName.Location = new Point(129, 3);
+            textName.Location = new Point(194, 4);
+            textName.Margin = new Padding(4);
             textName.Name = "textName";
-            textName.Size = new Size(132, 23);
+            textName.Size = new Size(196, 30);
             textName.TabIndex = 38;
             // 
             // cboID
             // 
             cboID.FormattingEnabled = true;
-            cboID.Location = new Point(6, 31);
+            cboID.Location = new Point(9, 46);
+            cboID.Margin = new Padding(4);
             cboID.Name = "cboID";
-            cboID.Size = new Size(58, 23);
+            cboID.Size = new Size(85, 31);
             cboID.TabIndex = 36;
             cboID.SelectedIndexChanged += cboID_SelectedIndexChanged_1;
             // 
@@ -481,9 +477,10 @@ namespace ToyProducts
             panel3.Controls.Add(textNost);
             panel3.Controls.Add(textCost);
             panel3.Controls.Add(PCost);
-            panel3.Location = new Point(297, 28);
+            panel3.Location = new Point(446, 42);
+            panel3.Margin = new Padding(4);
             panel3.Name = "panel3";
-            panel3.Size = new Size(321, 60);
+            panel3.Size = new Size(482, 90);
             panel3.TabIndex = 36;
             // 
             // panel4
@@ -495,17 +492,19 @@ namespace ToyProducts
             panel4.Controls.Add(PStat);
             panel4.Controls.Add(textPCat);
             panel4.Controls.Add(PCat);
-            panel4.Location = new Point(631, 29);
+            panel4.Location = new Point(946, 44);
+            panel4.Margin = new Padding(4);
             panel4.Name = "panel4";
-            panel4.Size = new Size(274, 60);
+            panel4.Size = new Size(411, 90);
             panel4.TabIndex = 37;
             // 
             // btnFirst
             // 
-            btnFirst.Font = new Font("Arial Unicode MS", 9F);
-            btnFirst.Location = new Point(13, 92);
+            btnFirst.Font = new Font("Microsoft Sans Serif", 9F);
+            btnFirst.Location = new Point(20, 138);
+            btnFirst.Margin = new Padding(4);
             btnFirst.Name = "btnFirst";
-            btnFirst.Size = new Size(75, 23);
+            btnFirst.Size = new Size(112, 34);
             btnFirst.TabIndex = 10;
             btnFirst.Text = "First";
             btnFirst.UseVisualStyleBackColor = true;
@@ -513,21 +512,22 @@ namespace ToyProducts
             // 
             // btnLast
             // 
-            btnLast.Font = new Font("Arial Unicode MS", 9F);
-            btnLast.Location = new Point(193, 92);
+            btnLast.Font = new Font("Microsoft Sans Serif", 9F);
+            btnLast.Location = new Point(290, 138);
+            btnLast.Margin = new Padding(4);
             btnLast.Name = "btnLast";
-            btnLast.Size = new Size(75, 23);
+            btnLast.Size = new Size(112, 34);
             btnLast.TabIndex = 38;
             btnLast.Text = "Last";
             btnLast.UseVisualStyleBackColor = true;
-            btnLast.Click += btnLast_Click_1;
             // 
             // btnRenew
             // 
-            btnRenew.Font = new Font("Arial Unicode MS", 9F);
-            btnRenew.Location = new Point(302, 92);
+            btnRenew.Font = new Font("Microsoft Sans Serif", 9F);
+            btnRenew.Location = new Point(453, 138);
+            btnRenew.Margin = new Padding(4);
             btnRenew.Name = "btnRenew";
-            btnRenew.Size = new Size(75, 23);
+            btnRenew.Size = new Size(112, 34);
             btnRenew.TabIndex = 39;
             btnRenew.Text = "Renew";
             btnRenew.UseVisualStyleBackColor = true;
@@ -535,10 +535,11 @@ namespace ToyProducts
             // 
             // btnPrevious
             // 
-            btnPrevious.Font = new Font("Arial Unicode MS", 9F);
-            btnPrevious.Location = new Point(94, 92);
+            btnPrevious.Font = new Font("Microsoft Sans Serif", 9F);
+            btnPrevious.Location = new Point(141, 138);
+            btnPrevious.Margin = new Padding(4);
             btnPrevious.Name = "btnPrevious";
-            btnPrevious.Size = new Size(42, 23);
+            btnPrevious.Size = new Size(63, 34);
             btnPrevious.TabIndex = 40;
             btnPrevious.Text = "<";
             btnPrevious.UseVisualStyleBackColor = true;
@@ -546,10 +547,11 @@ namespace ToyProducts
             // 
             // btnNext
             // 
-            btnNext.Font = new Font("Arial Unicode MS", 9F);
-            btnNext.Location = new Point(144, 92);
+            btnNext.Font = new Font("Microsoft Sans Serif", 9F);
+            btnNext.Location = new Point(216, 138);
+            btnNext.Margin = new Padding(4);
             btnNext.Name = "btnNext";
-            btnNext.Size = new Size(42, 23);
+            btnNext.Size = new Size(63, 34);
             btnNext.TabIndex = 41;
             btnNext.Text = ">";
             btnNext.UseVisualStyleBackColor = true;
@@ -557,10 +559,11 @@ namespace ToyProducts
             // 
             // btnSave
             // 
-            btnSave.Font = new Font("Arial Unicode MS", 9F);
-            btnSave.Location = new Point(760, 92);
+            btnSave.Font = new Font("Microsoft Sans Serif", 9F);
+            btnSave.Location = new Point(1140, 138);
+            btnSave.Margin = new Padding(4);
             btnSave.Name = "btnSave";
-            btnSave.Size = new Size(75, 23);
+            btnSave.Size = new Size(112, 34);
             btnSave.TabIndex = 42;
             btnSave.Text = "Save";
             btnSave.UseVisualStyleBackColor = true;
@@ -568,10 +571,11 @@ namespace ToyProducts
             // 
             // btnReduction
             // 
-            btnReduction.Font = new Font("Arial Unicode MS", 9F);
-            btnReduction.Location = new Point(643, 92);
+            btnReduction.Font = new Font("Microsoft Sans Serif", 9F);
+            btnReduction.Location = new Point(964, 138);
+            btnReduction.Margin = new Padding(4);
             btnReduction.Name = "btnReduction";
-            btnReduction.Size = new Size(75, 23);
+            btnReduction.Size = new Size(112, 34);
             btnReduction.TabIndex = 43;
             btnReduction.Text = "Reduction";
             btnReduction.UseVisualStyleBackColor = true;
@@ -579,10 +583,11 @@ namespace ToyProducts
             // 
             // btnRefresh
             // 
-            btnRefresh.Font = new Font("Arial Unicode MS", 9F);
-            btnRefresh.Location = new Point(816, 92);
+            btnRefresh.Font = new Font("Microsoft Sans Serif", 9F);
+            btnRefresh.Location = new Point(1224, 138);
+            btnRefresh.Margin = new Padding(4);
             btnRefresh.Name = "btnRefresh";
-            btnRefresh.Size = new Size(75, 23);
+            btnRefresh.Size = new Size(112, 34);
             btnRefresh.TabIndex = 44;
             btnRefresh.Text = "Refresh";
             btnRefresh.UseVisualStyleBackColor = true;
@@ -603,30 +608,29 @@ namespace ToyProducts
             panel5.Controls.Add(panel2);
             panel5.Controls.Add(btnReduction);
             panel5.Controls.Add(btnRenew);
-            panel5.Location = new Point(222, 0);
+            panel5.Location = new Point(333, 0);
+            panel5.Margin = new Padding(4);
             panel5.Name = "panel5";
-            panel5.Size = new Size(937, 531);
+            panel5.Size = new Size(1406, 796);
             panel5.TabIndex = 45;
+            panel5.Paint += panel5_Paint;
             // 
             // FormToyProducts
             // 
-            AutoScaleDimensions = new SizeF(96F, 96F);
+            AutoScaleDimensions = new SizeF(144F, 144F);
             AutoScaleMode = AutoScaleMode.Dpi;
-            ClientSize = new Size(1159, 531);
+            ClientSize = new Size(1738, 796);
             Controls.Add(btnSave);
             Controls.Add(label4);
             Controls.Add(dataproject);
             Controls.Add(panel5);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
-            Margin = new Padding(2);
             Name = "FormToyProducts";
             Text = "Project Management";
             Load += ToyProducts_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)name).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataproject).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
@@ -644,9 +648,7 @@ namespace ToyProducts
         private Panel panel1;
         private Label label1;
         private Label label2;
-        private DataGridView name;
         private Label label3;
-        private DataGridView dataGridView1;
         private Button btnproduct;
         private Button btnsales;
         private Button btninventory;
@@ -689,5 +691,7 @@ namespace ToyProducts
         private Button btnReduction;
         private Button btnRefresh;
         private Panel panel5;
+        private TextBox txtStaffID;
+        private TextBox txtStaffName;
     }
 }

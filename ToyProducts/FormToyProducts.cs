@@ -8,22 +8,37 @@ namespace ToyProducts
 {
     public partial class FormToyProducts : Form
     {
-        // local cache of the rows we need 暫存從資料庫抓出的書籍資料的表格
         private readonly DataTable dt = new DataTable();
-
-        // current position in the table 追蹤目前選中的資料列索引
         private int rowIndex = 0;
 
         private string dbPath;
         private OleDbConnection con;
 
+        private string staffName;
+        private string staffID;
+        // ✅ 使用 UserSession 初始化登入資訊與資料來源
+
         public FormToyProducts()
         {
             InitializeComponent();
-            dbPath = Path.Combine(Application.StartupPath, "ITP4915M.accdb");
+
+            // 直接使用 UserSession 靜態屬性
+            txtStaffName.Text = UserSession.StaffName;
+            txtStaffID.Text = UserSession.StaffID;
+            dbPath = UserSession.DbPath;
             con = new OleDbConnection($"Provider=Microsoft.ACE.OLEDB.12.0;Data Source={dbPath};");
+
+            LoadProductData();
         }
 
+
+        // ✅ 有參數建構子：登入後使用
+
+
+        private void ToyProducts_Load(object sender, EventArgs e)
+        {
+            // 傳統 OnLoad 已由建構子處理 LoadProductData()
+        }
 
         private void LoadProductData()
         {
@@ -65,20 +80,10 @@ namespace ToyProducts
             textQty.Text = dt.Rows[rowIndex]["Product_Quantity"].ToString();
             textPCat.Text = dt.Rows[rowIndex]["Product_Category"].ToString();
             textPStat.Text = dt.Rows[rowIndex]["Product_Status"].ToString();
-
-            cboID.SelectedIndex = rowIndex; // 同步 ComboBox
-        }
-
-
-        private void ToyProducts_Load(object sender, EventArgs e)
-        {
-            LoadProductData();
-
-
+            cboID.SelectedIndex = rowIndex;
         }
 
         private void cboID_SelectedIndexChanged(object sender, EventArgs e)
-        //選擇不同產品時自動更新資料
         {
             if (cboID.SelectedIndex >= 0)
             {
@@ -87,49 +92,10 @@ namespace ToyProducts
             }
         }
 
-
-        private void panel1_Paint(object sender, PaintEventArgs e) { }
-
-        private void label2_Click(object sender, EventArgs e) { }
-
-        private void btnproduct_Click(object sender, EventArgs e) { }
-
-        private void dataproject_CellContentClick(object sender, DataGridViewCellEventArgs e) { }
-
-        private void textPStat_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnFirst_Click(object sender, EventArgs e)
-        {
-            rowIndex = 0;
-            UpdateTextBoxes();
-        }
-
-        private void btnPrevious_Click(object sender, EventArgs e)
-        {
-            if (rowIndex > 0)
-            {
-                rowIndex--;
-                UpdateTextBoxes();
-            }
-        }
-
-        private void btnNext_Click(object sender, EventArgs e)
-        {
-            if (rowIndex < dt.Rows.Count - 1)
-            {
-                rowIndex++;
-                UpdateTextBoxes();
-            }
-        }
-
-        private void btnLast_Click_1(object sender, EventArgs e)
-        {
-            rowIndex = dt.Rows.Count - 1;
-            UpdateTextBoxes();
-        }
+        private void btnFirst_Click(object sender, EventArgs e) { rowIndex = 0; UpdateTextBoxes(); }
+        private void btnPrevious_Click(object sender, EventArgs e) { if (rowIndex > 0) { rowIndex--; UpdateTextBoxes(); } }
+        private void btnNext_Click(object sender, EventArgs e) { if (rowIndex < dt.Rows.Count - 1) { rowIndex++; UpdateTextBoxes(); } }
+        private void btnLast_Click(object sender, EventArgs e) { rowIndex = dt.Rows.Count - 1; UpdateTextBoxes(); }
 
         private void btnRenew_Click(object sender, EventArgs e)
         {
@@ -139,7 +105,6 @@ namespace ToyProducts
                 return;
             }
 
-            // 嘗試轉換數值欄位
             if (!int.TryParse(textNost.Text, out int cost) ||
                 !int.TryParse(textNPrice.Text, out int price) ||
                 !int.TryParse(textNQty.Text, out int qty))
@@ -148,7 +113,6 @@ namespace ToyProducts
                 return;
             }
 
-            // 更新 DataTable 中的欄位值
             dt.Rows[rowIndex]["Product_Name"] = textNName.Text;
             dt.Rows[rowIndex]["Product_Cost"] = cost;
             dt.Rows[rowIndex]["Product_Price"] = price;
@@ -156,9 +120,7 @@ namespace ToyProducts
             dt.Rows[rowIndex]["Product_Category"] = cboNPCat.Text;
             dt.Rows[rowIndex]["Product_Status"] = cboNPStat.Text;
 
-            // 更新畫面顯示（同步至上方顯示欄位）
             UpdateTextBoxes();
-
             MessageBox.Show("✅ 已更新此筆產品資料（尚未儲存至資料庫）", "成功", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -171,14 +133,14 @@ namespace ToyProducts
             }
 
             string updateSql = @"
-        UPDATE ToyProducts SET 
-            Product_Name = ?, 
-            Product_Cost = ?, 
-            Product_Price = ?, 
-            Product_Quantity = ?, 
-            Product_Category = ?, 
-            Product_Status = ?
-        WHERE Product_ID = ?";
+                UPDATE ToyProducts SET 
+                    Product_Name = ?, 
+                    Product_Cost = ?, 
+                    Product_Price = ?, 
+                    Product_Quantity = ?, 
+                    Product_Category = ?, 
+                    Product_Status = ?
+                WHERE Product_ID = ?";
 
             try
             {
@@ -187,7 +149,6 @@ namespace ToyProducts
                 {
                     conn.Open();
 
-                    // 加入參數（順序需與 SQL 中的 ? 對應）
                     cmd.Parameters.AddWithValue("?", dt.Rows[rowIndex]["Product_Name"]);
                     cmd.Parameters.AddWithValue("?", dt.Rows[rowIndex]["Product_Cost"]);
                     cmd.Parameters.AddWithValue("?", dt.Rows[rowIndex]["Product_Price"]);
@@ -199,13 +160,9 @@ namespace ToyProducts
                     int affected = cmd.ExecuteNonQuery();
 
                     if (affected > 0)
-                    {
                         MessageBox.Show("✅ 資料已成功儲存至 Access 資料庫！", "完成", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
                     else
-                    {
                         MessageBox.Show("⚠ 資料未成功更新（找不到對應 Product_ID）。", "注意", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
                 }
             }
             catch (Exception ex)
@@ -232,7 +189,7 @@ namespace ToyProducts
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            LoadProductData();  // 重新從 Access 載入資料
+            LoadProductData();
             MessageBox.Show("✅ 已重新載入產品資料", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -241,11 +198,8 @@ namespace ToyProducts
             if (cboID.SelectedIndex >= 0 && cboID.SelectedIndex < dt.Rows.Count)
             {
                 rowIndex = cboID.SelectedIndex;
-
-                // 更新顯示欄位
                 UpdateTextBoxes();
 
-                // 更新可編輯欄位
                 textNName.Text = dt.Rows[rowIndex]["Product_Name"].ToString();
                 textNost.Text = dt.Rows[rowIndex]["Product_Cost"].ToString();
                 textNPrice.Text = dt.Rows[rowIndex]["Product_Price"].ToString();
@@ -258,7 +212,6 @@ namespace ToyProducts
         private void btnAccountControl_Click(object sender, EventArgs e)
         {
             FormAccountControl accountControl = new FormAccountControl();
-
             accountControl.ShowDialog();
         }
 
@@ -270,16 +223,16 @@ namespace ToyProducts
 
         private void btninventory_Click(object sender, EventArgs e)
         {
-            FormInventoryControl inventoryControl = new FormInventoryControl();
-
+            DropFormInventoryControl inventoryControl = new DropFormInventoryControl();
             inventoryControl.Show();
             this.Hide();
         }
-        private void btnsales_Click(object sender, EventArgs e)
-        {
 
-        }
-        private void btnproject_Click(object sender, EventArgs e)
+        private void btnsales_Click(object sender, EventArgs e) { }
+        private void btnproject_Click(object sender, EventArgs e) { }
+        private void txtUserID_TextChanged(object sender, EventArgs e) { }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
         {
 
         }

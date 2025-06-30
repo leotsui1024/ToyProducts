@@ -38,6 +38,7 @@
             textUserName = new TextBox();
             textUserPassword = new TextBox();
             btnLogin = new Button();
+            chkShowPassword = new CheckBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -148,12 +149,24 @@
             btnLogin.UseVisualStyleBackColor = false;
             btnLogin.Click += btnLogin_Click;
             // 
+            // chkShowPassword
+            // 
+            chkShowPassword.AutoSize = true;
+            chkShowPassword.Location = new Point(347, 328);
+            chkShowPassword.Name = "chkShowPassword";
+            chkShowPassword.Size = new Size(167, 27);
+            chkShowPassword.TabIndex = 7;
+            chkShowPassword.Text = "Show Password\n";
+            chkShowPassword.UseVisualStyleBackColor = true;
+            chkShowPassword.CheckedChanged += chkShowPassword_CheckedChanged;
+            // 
             // FormLogin
             // 
             AutoScaleDimensions = new SizeF(11F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Window;
             ClientSize = new Size(800, 450);
+            Controls.Add(chkShowPassword);
             Controls.Add(btnLogin);
             Controls.Add(textUserPassword);
             Controls.Add(textUserName);
@@ -185,5 +198,6 @@
         private TextBox textUserName;
         private TextBox textUserPassword;
         private Button btnLogin;
+        private CheckBox chkShowPassword;
     }
 }

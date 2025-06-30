@@ -30,61 +30,74 @@
         {
             panel2 = new Panel();
             panel1 = new Panel();
+            txtStaffID = new TextBox();
+            txtStaffName = new TextBox();
             buttonAccountControl = new Button();
             buttonSystemMaintenance = new Button();
             buttonInventoryControl = new Button();
             buttonProductSpecificationManagement = new Button();
             buttonProjectManagement = new Button();
             buttonSalesOrderManagement = new Button();
-            iD = new DataGridView();
-            name = new DataGridView();
             labelId = new Label();
             labelName = new Label();
             labelWelcome = new Label();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)iD).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)name).BeginInit();
             SuspendLayout();
             // 
             // panel2
             // 
             panel2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel2.BackColor = Color.White;
-            panel2.Location = new Point(222, 0);
+            panel2.Location = new Point(349, 0);
+            panel2.Margin = new Padding(5);
             panel2.Name = "panel2";
-            panel2.Size = new Size(937, 531);
+            panel2.Size = new Size(1472, 814);
             panel2.TabIndex = 6;
             // 
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(3, 52, 110);
             panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(txtStaffID);
+            panel1.Controls.Add(txtStaffName);
             panel1.Controls.Add(buttonAccountControl);
             panel1.Controls.Add(buttonSystemMaintenance);
             panel1.Controls.Add(buttonInventoryControl);
             panel1.Controls.Add(buttonProductSpecificationManagement);
             panel1.Controls.Add(buttonProjectManagement);
             panel1.Controls.Add(buttonSalesOrderManagement);
-            panel1.Controls.Add(iD);
-            panel1.Controls.Add(name);
             panel1.Controls.Add(labelId);
             panel1.Controls.Add(labelName);
             panel1.Controls.Add(labelWelcome);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(229, 531);
+            panel1.Size = new Size(359, 814);
             panel1.TabIndex = 5;
+            // 
+            // txtStaffID
+            // 
+            txtStaffID.Location = new Point(113, 95);
+            txtStaffID.Name = "txtStaffID";
+            txtStaffID.ReadOnly = true;
+            txtStaffID.Size = new Size(220, 30);
+            txtStaffID.TabIndex = 15;
+            // 
+            // txtStaffName
+            // 
+            txtStaffName.Location = new Point(113, 54);
+            txtStaffName.Name = "txtStaffName";
+            txtStaffName.ReadOnly = true;
+            txtStaffName.Size = new Size(220, 30);
+            txtStaffName.TabIndex = 14;
             // 
             // buttonAccountControl
             // 
             buttonAccountControl.BackColor = Color.FromArgb(110, 172, 218);
-            buttonAccountControl.Font = new Font("Arial Unicode MS", 9F);
-            buttonAccountControl.Location = new Point(7, 492);
-            buttonAccountControl.Margin = new Padding(2);
+            buttonAccountControl.Font = new Font("Microsoft Sans Serif", 9F);
+            buttonAccountControl.Location = new Point(11, 754);
             buttonAccountControl.Name = "buttonAccountControl";
-            buttonAccountControl.Size = new Size(209, 27);
+            buttonAccountControl.Size = new Size(328, 41);
             buttonAccountControl.TabIndex = 13;
             buttonAccountControl.Text = "Account Control";
             buttonAccountControl.UseVisualStyleBackColor = false;
@@ -93,11 +106,10 @@
             // buttonSystemMaintenance
             // 
             buttonSystemMaintenance.BackColor = Color.FromArgb(110, 172, 218);
-            buttonSystemMaintenance.Font = new Font("Arial Unicode MS", 9F);
-            buttonSystemMaintenance.Location = new Point(7, 461);
-            buttonSystemMaintenance.Margin = new Padding(2);
+            buttonSystemMaintenance.Font = new Font("Microsoft Sans Serif", 9F);
+            buttonSystemMaintenance.Location = new Point(11, 707);
             buttonSystemMaintenance.Name = "buttonSystemMaintenance";
-            buttonSystemMaintenance.Size = new Size(209, 27);
+            buttonSystemMaintenance.Size = new Size(328, 41);
             buttonSystemMaintenance.TabIndex = 12;
             buttonSystemMaintenance.Text = "System Maintenance";
             buttonSystemMaintenance.UseVisualStyleBackColor = false;
@@ -106,11 +118,10 @@
             // buttonInventoryControl
             // 
             buttonInventoryControl.BackColor = Color.White;
-            buttonInventoryControl.Font = new Font("Arial Unicode MS", 9F);
-            buttonInventoryControl.Location = new Point(7, 260);
-            buttonInventoryControl.Margin = new Padding(2);
+            buttonInventoryControl.Font = new Font("Microsoft Sans Serif", 9F);
+            buttonInventoryControl.Location = new Point(11, 399);
             buttonInventoryControl.Name = "buttonInventoryControl";
-            buttonInventoryControl.Size = new Size(209, 44);
+            buttonInventoryControl.Size = new Size(328, 67);
             buttonInventoryControl.TabIndex = 7;
             buttonInventoryControl.Text = "Inventory Control";
             buttonInventoryControl.UseVisualStyleBackColor = false;
@@ -119,11 +130,10 @@
             // buttonProductSpecificationManagement
             // 
             buttonProductSpecificationManagement.BackColor = Color.FromArgb(110, 172, 218);
-            buttonProductSpecificationManagement.Font = new Font("Arial Unicode MS", 9F);
-            buttonProductSpecificationManagement.Location = new Point(7, 165);
-            buttonProductSpecificationManagement.Margin = new Padding(2);
+            buttonProductSpecificationManagement.Font = new Font("Microsoft Sans Serif", 9F);
+            buttonProductSpecificationManagement.Location = new Point(11, 253);
             buttonProductSpecificationManagement.Name = "buttonProductSpecificationManagement";
-            buttonProductSpecificationManagement.Size = new Size(209, 44);
+            buttonProductSpecificationManagement.Size = new Size(328, 67);
             buttonProductSpecificationManagement.TabIndex = 6;
             buttonProductSpecificationManagement.Text = "Product Specification Management";
             buttonProductSpecificationManagement.UseVisualStyleBackColor = false;
@@ -132,11 +142,10 @@
             // buttonProjectManagement
             // 
             buttonProjectManagement.BackColor = Color.FromArgb(110, 172, 218);
-            buttonProjectManagement.Font = new Font("Arial Unicode MS", 9F);
-            buttonProjectManagement.Location = new Point(7, 117);
-            buttonProjectManagement.Margin = new Padding(2);
+            buttonProjectManagement.Font = new Font("Microsoft Sans Serif", 9F);
+            buttonProjectManagement.Location = new Point(11, 179);
             buttonProjectManagement.Name = "buttonProjectManagement";
-            buttonProjectManagement.Size = new Size(209, 44);
+            buttonProjectManagement.Size = new Size(328, 67);
             buttonProjectManagement.TabIndex = 6;
             buttonProjectManagement.Text = "Project Management";
             buttonProjectManagement.UseVisualStyleBackColor = false;
@@ -145,47 +154,23 @@
             // buttonSalesOrderManagement
             // 
             buttonSalesOrderManagement.BackColor = Color.FromArgb(110, 172, 218);
-            buttonSalesOrderManagement.Font = new Font("Arial Unicode MS", 9F);
-            buttonSalesOrderManagement.Location = new Point(7, 212);
-            buttonSalesOrderManagement.Margin = new Padding(2);
+            buttonSalesOrderManagement.Font = new Font("Microsoft Sans Serif", 9F);
+            buttonSalesOrderManagement.Location = new Point(11, 325);
             buttonSalesOrderManagement.Name = "buttonSalesOrderManagement";
-            buttonSalesOrderManagement.Size = new Size(209, 44);
+            buttonSalesOrderManagement.Size = new Size(328, 67);
             buttonSalesOrderManagement.TabIndex = 5;
             buttonSalesOrderManagement.Text = "Sales Order Management";
             buttonSalesOrderManagement.UseVisualStyleBackColor = false;
             buttonSalesOrderManagement.Click += buttonSalesOrderManagement_Click;
-            // 
-            // iD
-            // 
-            iD.BackgroundColor = Color.FromArgb(110, 172, 218);
-            iD.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            iD.Location = new Point(72, 60);
-            iD.Margin = new Padding(2);
-            iD.Name = "iD";
-            iD.RowHeadersWidth = 62;
-            iD.Size = new Size(140, 27);
-            iD.TabIndex = 4;
-            // 
-            // name
-            // 
-            name.BackgroundColor = Color.FromArgb(110, 172, 218);
-            name.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            name.Location = new Point(72, 33);
-            name.Margin = new Padding(2);
-            name.Name = "name";
-            name.RowHeadersWidth = 62;
-            name.Size = new Size(140, 27);
-            name.TabIndex = 1;
             // 
             // labelId
             // 
             labelId.AutoSize = true;
             labelId.Font = new Font("Tahoma", 12F, FontStyle.Bold);
             labelId.ForeColor = SystemColors.Control;
-            labelId.Location = new Point(33, 60);
-            labelId.Margin = new Padding(2, 0, 2, 0);
+            labelId.Location = new Point(52, 92);
             labelId.Name = "labelId";
-            labelId.Size = new Size(34, 19);
+            labelId.Size = new Size(52, 29);
             labelId.TabIndex = 3;
             labelId.Text = "ID:";
             // 
@@ -194,10 +179,9 @@
             labelName.AutoSize = true;
             labelName.Font = new Font("Tahoma", 12F, FontStyle.Bold);
             labelName.ForeColor = SystemColors.Control;
-            labelName.Location = new Point(7, 33);
-            labelName.Margin = new Padding(2, 0, 2, 0);
+            labelName.Location = new Point(11, 51);
             labelName.Name = "labelName";
-            labelName.Size = new Size(62, 19);
+            labelName.Size = new Size(92, 29);
             labelName.TabIndex = 2;
             labelName.Text = "Name:";
             // 
@@ -206,26 +190,24 @@
             labelWelcome.AutoSize = true;
             labelWelcome.Font = new Font("Tahoma", 12F, FontStyle.Bold);
             labelWelcome.ForeColor = SystemColors.Control;
-            labelWelcome.Location = new Point(7, 6);
-            labelWelcome.Margin = new Padding(2, 0, 2, 0);
+            labelWelcome.Location = new Point(11, 9);
             labelWelcome.Name = "labelWelcome";
-            labelWelcome.Size = new Size(88, 19);
+            labelWelcome.Size = new Size(132, 29);
             labelWelcome.TabIndex = 1;
             labelWelcome.Text = "Welcome!";
             // 
             // FormInventoryControl
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(11F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1159, 531);
+            ClientSize = new Size(1821, 814);
             Controls.Add(panel2);
             Controls.Add(panel1);
+            Margin = new Padding(5);
             Name = "FormInventoryControl";
             Text = "FormInventoryControl";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)iD).EndInit();
-            ((System.ComponentModel.ISupportInitialize)name).EndInit();
             ResumeLayout(false);
         }
 
@@ -239,10 +221,10 @@
         private Button buttonProductSpecificationManagement;
         private Button buttonProjectManagement;
         private Button buttonSalesOrderManagement;
-        private DataGridView iD;
-        private DataGridView name;
         private Label labelId;
         private Label labelName;
         private Label labelWelcome;
+        private TextBox txtStaffID;
+        private TextBox txtStaffName;
     }
 }
