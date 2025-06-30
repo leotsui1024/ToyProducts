@@ -42,6 +42,7 @@
             panel1 = new Panel();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // buttonLogin
@@ -58,6 +59,7 @@
             buttonLogin.TabIndex = 43;
             buttonLogin.Text = "CHANGE";
             buttonLogin.UseVisualStyleBackColor = false;
+            buttonLogin.Click += this.buttonLogin_Click;
             // 
             // txtConfirmPassword
             // 
@@ -130,7 +132,7 @@
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.InitialImage = null;
-            pictureBox1.Location = new Point(16, 17);
+            pictureBox1.Location = new Point(11, 11);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(80, 80);
             pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
@@ -143,7 +145,7 @@
             label3.BackColor = Color.White;
             label3.Font = new Font("Tahoma", 16F, FontStyle.Bold);
             label3.ForeColor = SystemColors.ControlText;
-            label3.Location = new Point(103, 17);
+            label3.Location = new Point(98, 11);
             label3.Name = "label3";
             label3.Size = new Size(191, 27);
             label3.TabIndex = 34;
@@ -153,13 +155,15 @@
             // 
             panel1.BackColor = Color.White;
             panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(pictureBox1);
+            panel1.Controls.Add(label3);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(499, 391);
             panel1.TabIndex = 44;
             // 
-            // AccountControl
+            // FormAccountControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -172,14 +176,14 @@
             Controls.Add(txtUserID);
             Controls.Add(label7);
             Controls.Add(pictureBox2);
-            Controls.Add(pictureBox1);
-            Controls.Add(label3);
             Controls.Add(panel1);
-            Name = "AccountControl";
+            Name = "FormAccountControl";
             Text = "AccountControl";
             Load += AccountControl_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
