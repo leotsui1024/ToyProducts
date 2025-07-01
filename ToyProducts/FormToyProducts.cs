@@ -270,7 +270,7 @@ namespace ToyProducts
 
         private void btninventory_Click(object sender, EventArgs e)
         {
-            DropFormInventoryControl inventoryControl = new DropFormInventoryControl();
+            FormInventoryControl inventoryControl = new FormInventoryControl();
             inventoryControl.Show();
             this.Hide();
         }

@@ -59,7 +59,7 @@
             buttonLogin.TabIndex = 43;
             buttonLogin.Text = "CHANGE";
             buttonLogin.UseVisualStyleBackColor = false;
-            buttonLogin.Click += this.buttonLogin_Click;
+            buttonLogin.Click += buttonLogin_Click;
             // 
             // txtConfirmPassword
             // 
@@ -103,6 +103,7 @@
             txtUserID.Name = "txtUserID";
             txtUserID.Size = new Size(229, 23);
             txtUserID.TabIndex = 38;
+            txtUserID.Visible = false;
             txtUserID.TextChanged += txtUserID_TextChanged;
             // 
             // label7

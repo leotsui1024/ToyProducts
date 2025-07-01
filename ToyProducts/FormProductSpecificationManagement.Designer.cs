@@ -29,6 +29,13 @@
         private void InitializeComponent()
         {
             panel2 = new Panel();
+            labelProductSpecificationManagement = new Label();
+            labelSearchByID = new Label();
+            textBox1 = new TextBox();
+            buttonSearchProductSpecification = new Button();
+            buttonDeleteProductSpecification = new Button();
+            buttonEditProductSpecification = new Button();
+            buttonCreateProductSpecification = new Button();
             labelName = new Label();
             labelWelcome = new Label();
             panel1 = new Panel();
@@ -41,19 +48,98 @@
             iD = new DataGridView();
             name = new DataGridView();
             labelId = new Label();
+            dataGridView1 = new DataGridView();
+            panel2.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)iD).BeginInit();
             ((System.ComponentModel.ISupportInitialize)name).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // panel2
             // 
             panel2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel2.BackColor = Color.White;
+            panel2.Controls.Add(dataGridView1);
+            panel2.Controls.Add(labelProductSpecificationManagement);
+            panel2.Controls.Add(labelSearchByID);
+            panel2.Controls.Add(textBox1);
+            panel2.Controls.Add(buttonSearchProductSpecification);
+            panel2.Controls.Add(buttonDeleteProductSpecification);
+            panel2.Controls.Add(buttonEditProductSpecification);
+            panel2.Controls.Add(buttonCreateProductSpecification);
             panel2.Location = new Point(222, 0);
             panel2.Name = "panel2";
             panel2.Size = new Size(937, 531);
             panel2.TabIndex = 4;
+            // 
+            // labelProductSpecificationManagement
+            // 
+            labelProductSpecificationManagement.AutoSize = true;
+            labelProductSpecificationManagement.Font = new Font("Tahoma", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelProductSpecificationManagement.Location = new Point(12, 9);
+            labelProductSpecificationManagement.Name = "labelProductSpecificationManagement";
+            labelProductSpecificationManagement.Size = new Size(342, 23);
+            labelProductSpecificationManagement.TabIndex = 2;
+            labelProductSpecificationManagement.Text = "Product Specification Management";
+            // 
+            // labelSearchByID
+            // 
+            labelSearchByID.AutoSize = true;
+            labelSearchByID.Font = new Font("Arial", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelSearchByID.Location = new Point(16, 82);
+            labelSearchByID.Name = "labelSearchByID";
+            labelSearchByID.Size = new Size(172, 17);
+            labelSearchByID.TabIndex = 2;
+            labelSearchByID.Text = "Product Specification ID: ";
+            // 
+            // textBox1
+            // 
+            textBox1.Font = new Font("Microsoft JhengHei UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 136);
+            textBox1.Location = new Point(194, 75);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(100, 28);
+            textBox1.TabIndex = 1;
+            // 
+            // buttonSearchProductSpecification
+            // 
+            buttonSearchProductSpecification.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            buttonSearchProductSpecification.Location = new Point(311, 76);
+            buttonSearchProductSpecification.Name = "buttonSearchProductSpecification";
+            buttonSearchProductSpecification.Size = new Size(98, 27);
+            buttonSearchProductSpecification.TabIndex = 0;
+            buttonSearchProductSpecification.Text = "Search";
+            buttonSearchProductSpecification.UseVisualStyleBackColor = true;
+            // 
+            // buttonDeleteProductSpecification
+            // 
+            buttonDeleteProductSpecification.Font = new Font("Arial", 9.75F);
+            buttonDeleteProductSpecification.Location = new Point(419, 38);
+            buttonDeleteProductSpecification.Name = "buttonDeleteProductSpecification";
+            buttonDeleteProductSpecification.Size = new Size(180, 27);
+            buttonDeleteProductSpecification.TabIndex = 0;
+            buttonDeleteProductSpecification.Text = "Delete Product Specification";
+            buttonDeleteProductSpecification.UseVisualStyleBackColor = true;
+            // 
+            // buttonEditProductSpecification
+            // 
+            buttonEditProductSpecification.Font = new Font("Arial", 9.75F);
+            buttonEditProductSpecification.Location = new Point(213, 38);
+            buttonEditProductSpecification.Name = "buttonEditProductSpecification";
+            buttonEditProductSpecification.Size = new Size(180, 27);
+            buttonEditProductSpecification.TabIndex = 0;
+            buttonEditProductSpecification.Text = "Edit Product Specification";
+            buttonEditProductSpecification.UseVisualStyleBackColor = true;
+            // 
+            // buttonCreateProductSpecification
+            // 
+            buttonCreateProductSpecification.Font = new Font("Arial", 9.75F);
+            buttonCreateProductSpecification.Location = new Point(12, 38);
+            buttonCreateProductSpecification.Name = "buttonCreateProductSpecification";
+            buttonCreateProductSpecification.Size = new Size(180, 27);
+            buttonCreateProductSpecification.TabIndex = 0;
+            buttonCreateProductSpecification.Text = "Create Product Specification";
+            buttonCreateProductSpecification.UseVisualStyleBackColor = true;
             // 
             // labelName
             // 
@@ -105,7 +191,7 @@
             // 
             buttonAccountControl.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             buttonAccountControl.BackColor = Color.FromArgb(110, 172, 218);
-            buttonAccountControl.Font = new Font("Arial Unicode MS", 9F);
+            buttonAccountControl.Font = new Font("Microsoft Sans Serif", 9F);
             buttonAccountControl.Location = new Point(7, 492);
             buttonAccountControl.Margin = new Padding(2);
             buttonAccountControl.Name = "buttonAccountControl";
@@ -119,7 +205,7 @@
             // 
             buttonSystemMaintenance.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             buttonSystemMaintenance.BackColor = Color.FromArgb(110, 172, 218);
-            buttonSystemMaintenance.Font = new Font("Arial Unicode MS", 9F);
+            buttonSystemMaintenance.Font = new Font("Microsoft Sans Serif", 9F);
             buttonSystemMaintenance.Location = new Point(7, 461);
             buttonSystemMaintenance.Margin = new Padding(2);
             buttonSystemMaintenance.Name = "buttonSystemMaintenance";
@@ -132,7 +218,7 @@
             // buttonInventoryControl
             // 
             buttonInventoryControl.BackColor = Color.FromArgb(110, 172, 218);
-            buttonInventoryControl.Font = new Font("Arial Unicode MS", 9F);
+            buttonInventoryControl.Font = new Font("Microsoft Sans Serif", 9F);
             buttonInventoryControl.Location = new Point(7, 260);
             buttonInventoryControl.Margin = new Padding(2);
             buttonInventoryControl.Name = "buttonInventoryControl";
@@ -145,7 +231,7 @@
             // buttonProductSpecificationManagement
             // 
             buttonProductSpecificationManagement.BackColor = Color.White;
-            buttonProductSpecificationManagement.Font = new Font("Arial Unicode MS", 9F);
+            buttonProductSpecificationManagement.Font = new Font("Microsoft Sans Serif", 9F);
             buttonProductSpecificationManagement.Location = new Point(7, 165);
             buttonProductSpecificationManagement.Margin = new Padding(2);
             buttonProductSpecificationManagement.Name = "buttonProductSpecificationManagement";
@@ -158,7 +244,7 @@
             // buttonProjectManagement
             // 
             buttonProjectManagement.BackColor = Color.FromArgb(110, 172, 218);
-            buttonProjectManagement.Font = new Font("Arial Unicode MS", 9F);
+            buttonProjectManagement.Font = new Font("Microsoft Sans Serif", 9F);
             buttonProjectManagement.Location = new Point(7, 117);
             buttonProjectManagement.Margin = new Padding(2);
             buttonProjectManagement.Name = "buttonProjectManagement";
@@ -171,7 +257,7 @@
             // buttonSalesOrderManagement
             // 
             buttonSalesOrderManagement.BackColor = Color.FromArgb(110, 172, 218);
-            buttonSalesOrderManagement.Font = new Font("Arial Unicode MS", 9F);
+            buttonSalesOrderManagement.Font = new Font("Microsoft Sans Serif", 9F);
             buttonSalesOrderManagement.Location = new Point(7, 212);
             buttonSalesOrderManagement.Margin = new Padding(2);
             buttonSalesOrderManagement.Name = "buttonSalesOrderManagement";
@@ -215,6 +301,15 @@
             labelId.TabIndex = 3;
             labelId.Text = "ID:";
             // 
+            // dataGridView1
+            // 
+            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(12, 118);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(913, 401);
+            dataGridView1.TabIndex = 3;
+            // 
             // FormProductSpecificationManagement
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -224,10 +319,13 @@
             Controls.Add(panel1);
             Name = "FormProductSpecificationManagement";
             Text = "FormProductSpecificationManagement";
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)iD).EndInit();
             ((System.ComponentModel.ISupportInitialize)name).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 
@@ -247,5 +345,13 @@
         private Button buttonAccountControl;
         private Button buttonSystemMaintenance;
         private Button buttonProductSpecificationManagement;
+        private Button buttonCreateProductSpecification;
+        private Button buttonEditProductSpecification;
+        private Button buttonDeleteProductSpecification;
+        private TextBox textBox1;
+        private Button buttonSearchProductSpecification;
+        private Label labelProductSpecificationManagement;
+        private Label labelSearchByID;
+        private DataGridView dataGridView1;
     }
 }
