@@ -17,7 +17,7 @@ namespace ToyProducts
             InitializeComponent();
         }
 
-        private void buttonProjectManagement_Click(object sender, EventArgs e)
+        private void buttonInventoryControl_Click(object sender, EventArgs e)
         {
             FormToyProducts toyProducts = new FormToyProducts();
             toyProducts.Show();
@@ -26,7 +26,7 @@ namespace ToyProducts
 
         private void buttonProductSpecificationManagement_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void buttonSalesOrderManagement_Click(object sender, EventArgs e)
@@ -36,10 +36,10 @@ namespace ToyProducts
             this.Hide();
         }
 
-        private void buttonInventoryControl_Click(object sender, EventArgs e)
+        private void buttonProjectManagement_Click(object sender, EventArgs e)
         {
-            FormInventoryControl inventoryControl = new FormInventoryControl();
-            inventoryControl.Show();
+            FormProjectManagement projectManagement = new FormProjectManagement();
+            projectManagement.Show();
             this.Hide();
         }
 

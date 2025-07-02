@@ -29,6 +29,14 @@
         private void InitializeComponent()
         {
             panel2 = new Panel();
+            dataGridView1 = new DataGridView();
+            labelProductSpecificationManagement = new Label();
+            buttonCreateSalesOrder = new Button();
+            labelSearchByID = new Label();
+            buttonEditSalesOrder = new Button();
+            textBox1 = new TextBox();
+            buttonDeleteSalesOrder = new Button();
+            buttonSearchProductSpecification = new Button();
             buttonAccountControl = new Button();
             buttonSystemMaintenance = new Button();
             buttonInventoryControl = new Button();
@@ -41,6 +49,8 @@
             labelName = new Label();
             labelWelcome = new Label();
             panel1 = new Panel();
+            panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)iD).BeginInit();
             ((System.ComponentModel.ISupportInitialize)name).BeginInit();
             panel1.SuspendLayout();
@@ -50,10 +60,95 @@
             // 
             panel2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel2.BackColor = Color.White;
+            panel2.Controls.Add(dataGridView1);
+            panel2.Controls.Add(labelProductSpecificationManagement);
+            panel2.Controls.Add(buttonCreateSalesOrder);
+            panel2.Controls.Add(labelSearchByID);
+            panel2.Controls.Add(buttonEditSalesOrder);
+            panel2.Controls.Add(textBox1);
+            panel2.Controls.Add(buttonDeleteSalesOrder);
+            panel2.Controls.Add(buttonSearchProductSpecification);
             panel2.Location = new Point(222, 0);
             panel2.Name = "panel2";
             panel2.Size = new Size(937, 531);
             panel2.TabIndex = 8;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(12, 119);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(913, 401);
+            dataGridView1.TabIndex = 16;
+            // 
+            // labelProductSpecificationManagement
+            // 
+            labelProductSpecificationManagement.AutoSize = true;
+            labelProductSpecificationManagement.Font = new Font("Tahoma", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelProductSpecificationManagement.Location = new Point(12, 10);
+            labelProductSpecificationManagement.Name = "labelProductSpecificationManagement";
+            labelProductSpecificationManagement.Size = new Size(249, 23);
+            labelProductSpecificationManagement.TabIndex = 14;
+            labelProductSpecificationManagement.Text = "Sales Order Management";
+            // 
+            // buttonCreateSalesOrder
+            // 
+            buttonCreateSalesOrder.Font = new Font("Arial", 9.75F);
+            buttonCreateSalesOrder.Location = new Point(12, 39);
+            buttonCreateSalesOrder.Name = "buttonCreateSalesOrder";
+            buttonCreateSalesOrder.Size = new Size(147, 27);
+            buttonCreateSalesOrder.TabIndex = 12;
+            buttonCreateSalesOrder.Text = "Create Sales Order";
+            buttonCreateSalesOrder.UseVisualStyleBackColor = true;
+            // 
+            // labelSearchByID
+            // 
+            labelSearchByID.AutoSize = true;
+            labelSearchByID.Font = new Font("Arial", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelSearchByID.Location = new Point(16, 83);
+            labelSearchByID.Name = "labelSearchByID";
+            labelSearchByID.Size = new Size(172, 17);
+            labelSearchByID.TabIndex = 15;
+            labelSearchByID.Text = "Product Specification ID: ";
+            // 
+            // buttonEditSalesOrder
+            // 
+            buttonEditSalesOrder.Font = new Font("Arial", 9.75F);
+            buttonEditSalesOrder.Location = new Point(179, 39);
+            buttonEditSalesOrder.Name = "buttonEditSalesOrder";
+            buttonEditSalesOrder.Size = new Size(147, 27);
+            buttonEditSalesOrder.TabIndex = 11;
+            buttonEditSalesOrder.Text = "Edit Sales Order";
+            buttonEditSalesOrder.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            textBox1.Font = new Font("Microsoft JhengHei UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 136);
+            textBox1.Location = new Point(194, 76);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(100, 28);
+            textBox1.TabIndex = 13;
+            // 
+            // buttonDeleteSalesOrder
+            // 
+            buttonDeleteSalesOrder.Font = new Font("Arial", 9.75F);
+            buttonDeleteSalesOrder.Location = new Point(348, 39);
+            buttonDeleteSalesOrder.Name = "buttonDeleteSalesOrder";
+            buttonDeleteSalesOrder.Size = new Size(147, 27);
+            buttonDeleteSalesOrder.TabIndex = 10;
+            buttonDeleteSalesOrder.Text = "Delete Sales Order";
+            buttonDeleteSalesOrder.UseVisualStyleBackColor = true;
+            // 
+            // buttonSearchProductSpecification
+            // 
+            buttonSearchProductSpecification.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            buttonSearchProductSpecification.Location = new Point(311, 77);
+            buttonSearchProductSpecification.Name = "buttonSearchProductSpecification";
+            buttonSearchProductSpecification.Size = new Size(98, 27);
+            buttonSearchProductSpecification.TabIndex = 9;
+            buttonSearchProductSpecification.Text = "Search";
+            buttonSearchProductSpecification.UseVisualStyleBackColor = true;
             // 
             // buttonAccountControl
             // 
@@ -90,6 +185,7 @@
             buttonInventoryControl.TabIndex = 7;
             buttonInventoryControl.Text = "Inventory Control";
             buttonInventoryControl.UseVisualStyleBackColor = false;
+            buttonInventoryControl.Click += buttonInventoryControl_Click_1;
             // 
             // buttonProductSpecificationManagement
             // 
@@ -102,6 +198,7 @@
             buttonProductSpecificationManagement.TabIndex = 6;
             buttonProductSpecificationManagement.Text = "Product Specification Management";
             buttonProductSpecificationManagement.UseVisualStyleBackColor = false;
+            buttonProductSpecificationManagement.Click += buttonProductSpecificationManagement_Click_1;
             // 
             // buttonProjectManagement
             // 
@@ -216,7 +313,11 @@
             Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "FormSalesOrderManagement";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FormSalesOrderManagement";
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)iD).EndInit();
             ((System.ComponentModel.ISupportInitialize)name).EndInit();
             panel1.ResumeLayout(false);
@@ -239,5 +340,15 @@
         private Label labelName;
         private Label labelWelcome;
         private Panel panel1;
+        private DataGridView dataGridView1;
+        private Label labelProductSpecificationManagement;
+        private Button buttonCreateSalesOrder;
+        private Label labelSearchByID;
+        private Button buttonEditProductSpecification;
+        private TextBox textBox1;
+        private Button buttonDeleteProductSpecification;
+        private Button buttonSearchProductSpecification;
+        private Button buttonEditSalesOrder;
+        private Button buttonDeleteSalesOrder;
     }
 }

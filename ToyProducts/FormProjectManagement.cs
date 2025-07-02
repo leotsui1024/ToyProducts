@@ -10,17 +10,15 @@ using System.Windows.Forms;
 
 namespace ToyProducts
 {
-    public partial class FormInventoryControl : Form
+    public partial class FormProjectManagement : Form
     {
-        public FormInventoryControl()
+        public FormProjectManagement()
         {
             InitializeComponent();
         }
         private void buttonProjectManagement_Click(object sender, EventArgs e)
         {
-            FormToyProducts toyProducts = new FormToyProducts();
-            toyProducts.Show();
-            this.Hide();
+
         }
 
         private void buttonProductSpecificationManagement_Click(object sender, EventArgs e)
@@ -39,7 +37,9 @@ namespace ToyProducts
 
         private void buttonInventoryControl_Click(object sender, EventArgs e)
         {
-
+            FormToyProducts toyProducts = new FormToyProducts();
+            toyProducts.Show();
+            this.Hide();
         }
 
         private void buttonSystemMaintenance_Click(object sender, EventArgs e)
@@ -52,6 +52,11 @@ namespace ToyProducts
         {
             FormAccountControl accountControl = new FormAccountControl();
             accountControl.ShowDialog();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

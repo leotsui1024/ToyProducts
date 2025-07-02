@@ -144,7 +144,7 @@ namespace ToyProducts
             // btninventory
             // 
             btninventory.AutoSize = true;
-            btninventory.BackColor = Color.FromArgb(110, 172, 218);
+            btninventory.BackColor = Color.White;
             btninventory.Font = new Font("Arial Unicode MS", 9F);
             btninventory.Location = new Point(7, 260);
             btninventory.Margin = new Padding(2);
@@ -158,7 +158,7 @@ namespace ToyProducts
             // btnproject
             // 
             btnproject.AutoSize = true;
-            btnproject.BackColor = Color.White;
+            btnproject.BackColor = Color.FromArgb(110, 172, 218);
             btnproject.Font = new Font("Arial Unicode MS", 9F);
             btnproject.Location = new Point(7, 117);
             btnproject.Margin = new Padding(2);
@@ -258,7 +258,6 @@ namespace ToyProducts
             // 
             // dataproject
             // 
-            dataproject.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataproject.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataproject.Location = new Point(235, 120);
             dataproject.Margin = new Padding(2);
@@ -274,12 +273,12 @@ namespace ToyProducts
             label4.BackColor = Color.White;
             label4.Font = new Font("Tahoma", 12F, FontStyle.Bold);
             label4.ForeColor = SystemColors.ActiveCaptionText;
-            label4.Location = new Point(243, 7);
+            label4.Location = new Point(13, 7);
             label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
-            label4.Size = new Size(179, 19);
+            label4.Size = new Size(153, 19);
             label4.TabIndex = 10;
-            label4.Text = "Project Management";
+            label4.Text = "Inventory Control";
             // 
             // PID
             // 
@@ -594,6 +593,7 @@ namespace ToyProducts
             panel5.AutoSize = true;
             panel5.BackColor = Color.White;
             panel5.Controls.Add(btnRefresh);
+            panel5.Controls.Add(label4);
             panel5.Controls.Add(panel4);
             panel5.Controls.Add(btnLast);
             panel5.Controls.Add(panel3);
@@ -614,14 +614,14 @@ namespace ToyProducts
             AutoScaleMode = AutoScaleMode.Dpi;
             ClientSize = new Size(1159, 531);
             Controls.Add(btnSave);
-            Controls.Add(label4);
             Controls.Add(dataproject);
             Controls.Add(panel5);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(2);
             Name = "FormToyProducts";
-            Text = "Project Management";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "CMS";
             Load += ToyProducts_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -635,6 +635,7 @@ namespace ToyProducts
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
             panel5.ResumeLayout(false);
+            panel5.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             panel2 = new Panel();
+            dataGridView1 = new DataGridView();
             labelProductSpecificationManagement = new Label();
             labelSearchByID = new Label();
             textBox1 = new TextBox();
@@ -48,12 +49,11 @@
             iD = new DataGridView();
             name = new DataGridView();
             labelId = new Label();
-            dataGridView1 = new DataGridView();
             panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)iD).BeginInit();
             ((System.ComponentModel.ISupportInitialize)name).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // panel2
@@ -72,6 +72,15 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(937, 531);
             panel2.TabIndex = 4;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(12, 118);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(913, 401);
+            dataGridView1.TabIndex = 3;
             // 
             // labelProductSpecificationManagement
             // 
@@ -301,15 +310,6 @@
             labelId.TabIndex = 3;
             labelId.Text = "ID:";
             // 
-            // dataGridView1
-            // 
-            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 118);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(913, 401);
-            dataGridView1.TabIndex = 3;
-            // 
             // FormProductSpecificationManagement
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -318,14 +318,15 @@
             Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "FormProductSpecificationManagement";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FormProductSpecificationManagement";
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)iD).EndInit();
             ((System.ComponentModel.ISupportInitialize)name).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 

@@ -179,6 +179,7 @@
             Controls.Add(pictureBox2);
             Controls.Add(panel1);
             Name = "FormAccountControl";
+            StartPosition = FormStartPosition.CenterParent;
             Text = "AccountControl";
             Load += AccountControl_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();

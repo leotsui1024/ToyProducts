@@ -92,7 +92,7 @@ namespace ToyProducts
 
         private void label2_Click(object sender, EventArgs e) { }
 
-        private void btnproduct_Click(object sender, EventArgs e) { }
+        
 
         private void dataproject_CellContentClick(object sender, DataGridViewCellEventArgs e) { }
 
@@ -258,7 +258,6 @@ namespace ToyProducts
         private void btnAccountControl_Click(object sender, EventArgs e)
         {
             FormAccountControl accountControl = new FormAccountControl();
-
             accountControl.ShowDialog();
         }
 
@@ -270,16 +269,26 @@ namespace ToyProducts
 
         private void btninventory_Click(object sender, EventArgs e)
         {
-            FormInventoryControl inventoryControl = new FormInventoryControl();
-            inventoryControl.Show();
-            this.Hide();
+            
         }
         private void btnsales_Click(object sender, EventArgs e)
         {
-
+            FormSalesOrderManagement salesOrderManagement = new FormSalesOrderManagement();
+            salesOrderManagement.Show();
+            this.Hide();
         }
         private void btnproject_Click(object sender, EventArgs e)
         {
+            FormProjectManagement projectManagement = new FormProjectManagement();
+            projectManagement.Show();
+            this.Hide();
+        }
+
+        private void btnproduct_Click(object sender, EventArgs e)
+        {
+            FormProductSpecificationManagement productSpecificationManagement = new FormProductSpecificationManagement();
+            productSpecificationManagement.Show();
+            this.Hide();
 
         }
     }

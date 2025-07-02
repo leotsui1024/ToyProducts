@@ -1,6 +1,6 @@
 ﻿namespace ToyProducts
 {
-    partial class FormInventoryControl
+    partial class FormProjectManagement
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,14 @@
         private void InitializeComponent()
         {
             panel2 = new Panel();
+            dataGridView1 = new DataGridView();
+            buttonSearchProductSpecification = new Button();
+            labelProjectManagement = new Label();
+            buttonDeleteSalesOrder = new Button();
+            buttonCreateProject = new Button();
+            textBox1 = new TextBox();
+            labelSearchByID = new Label();
+            buttonEditSalesOrder = new Button();
             panel1 = new Panel();
             buttonAccountControl = new Button();
             buttonSystemMaintenance = new Button();
@@ -41,6 +49,8 @@
             labelId = new Label();
             labelName = new Label();
             labelWelcome = new Label();
+            panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)iD).BeginInit();
             ((System.ComponentModel.ISupportInitialize)name).BeginInit();
@@ -50,10 +60,96 @@
             // 
             panel2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel2.BackColor = Color.White;
+            panel2.Controls.Add(dataGridView1);
+            panel2.Controls.Add(buttonSearchProductSpecification);
+            panel2.Controls.Add(labelProjectManagement);
+            panel2.Controls.Add(buttonDeleteSalesOrder);
+            panel2.Controls.Add(buttonCreateProject);
+            panel2.Controls.Add(textBox1);
+            panel2.Controls.Add(labelSearchByID);
+            panel2.Controls.Add(buttonEditSalesOrder);
             panel2.Location = new Point(222, 0);
             panel2.Name = "panel2";
             panel2.Size = new Size(937, 531);
             panel2.TabIndex = 6;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(8, 121);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(913, 401);
+            dataGridView1.TabIndex = 24;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            // 
+            // buttonSearchProductSpecification
+            // 
+            buttonSearchProductSpecification.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            buttonSearchProductSpecification.Location = new Point(206, 81);
+            buttonSearchProductSpecification.Name = "buttonSearchProductSpecification";
+            buttonSearchProductSpecification.Size = new Size(98, 27);
+            buttonSearchProductSpecification.TabIndex = 17;
+            buttonSearchProductSpecification.Text = "Search";
+            buttonSearchProductSpecification.UseVisualStyleBackColor = true;
+            // 
+            // labelProjectManagement
+            // 
+            labelProjectManagement.AutoSize = true;
+            labelProjectManagement.Font = new Font("Tahoma", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelProjectManagement.Location = new Point(8, 12);
+            labelProjectManagement.Name = "labelProjectManagement";
+            labelProjectManagement.Size = new Size(207, 23);
+            labelProjectManagement.TabIndex = 22;
+            labelProjectManagement.Text = "Project Management";
+            // 
+            // buttonDeleteSalesOrder
+            // 
+            buttonDeleteSalesOrder.Font = new Font("Arial", 9.75F);
+            buttonDeleteSalesOrder.Location = new Point(268, 41);
+            buttonDeleteSalesOrder.Name = "buttonDeleteSalesOrder";
+            buttonDeleteSalesOrder.Size = new Size(115, 27);
+            buttonDeleteSalesOrder.TabIndex = 18;
+            buttonDeleteSalesOrder.Text = "Delete Project";
+            buttonDeleteSalesOrder.UseVisualStyleBackColor = true;
+            // 
+            // buttonCreateProject
+            // 
+            buttonCreateProject.Font = new Font("Arial", 9.75F);
+            buttonCreateProject.Location = new Point(8, 41);
+            buttonCreateProject.Name = "buttonCreateProject";
+            buttonCreateProject.Size = new Size(115, 27);
+            buttonCreateProject.TabIndex = 20;
+            buttonCreateProject.Text = "Create Project";
+            buttonCreateProject.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            textBox1.Font = new Font("Microsoft JhengHei UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 136);
+            textBox1.Location = new Point(89, 80);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(100, 28);
+            textBox1.TabIndex = 21;
+            // 
+            // labelSearchByID
+            // 
+            labelSearchByID.AutoSize = true;
+            labelSearchByID.Font = new Font("Arial", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelSearchByID.Location = new Point(12, 85);
+            labelSearchByID.Name = "labelSearchByID";
+            labelSearchByID.Size = new Size(80, 17);
+            labelSearchByID.TabIndex = 23;
+            labelSearchByID.Text = "Project ID: ";
+            // 
+            // buttonEditSalesOrder
+            // 
+            buttonEditSalesOrder.Font = new Font("Arial", 9.75F);
+            buttonEditSalesOrder.Location = new Point(138, 41);
+            buttonEditSalesOrder.Name = "buttonEditSalesOrder";
+            buttonEditSalesOrder.Size = new Size(115, 27);
+            buttonEditSalesOrder.TabIndex = 19;
+            buttonEditSalesOrder.Text = "Edit Project";
+            buttonEditSalesOrder.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
@@ -105,7 +201,7 @@
             // 
             // buttonInventoryControl
             // 
-            buttonInventoryControl.BackColor = Color.White;
+            buttonInventoryControl.BackColor = Color.FromArgb(110, 172, 218);
             buttonInventoryControl.Font = new Font("Arial Unicode MS", 9F);
             buttonInventoryControl.Location = new Point(7, 260);
             buttonInventoryControl.Margin = new Padding(2);
@@ -131,7 +227,7 @@
             // 
             // buttonProjectManagement
             // 
-            buttonProjectManagement.BackColor = Color.FromArgb(110, 172, 218);
+            buttonProjectManagement.BackColor = Color.White;
             buttonProjectManagement.Font = new Font("Arial Unicode MS", 9F);
             buttonProjectManagement.Location = new Point(7, 117);
             buttonProjectManagement.Margin = new Padding(2);
@@ -213,15 +309,19 @@
             labelWelcome.TabIndex = 1;
             labelWelcome.Text = "Welcome!";
             // 
-            // FormInventoryControl
+            // FormProjectManagement
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1159, 531);
             Controls.Add(panel2);
             Controls.Add(panel1);
-            Name = "FormInventoryControl";
-            Text = "FormInventoryControl";
+            Name = "FormProjectManagement";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "CMS";
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)iD).EndInit();
@@ -244,5 +344,13 @@
         private Label labelId;
         private Label labelName;
         private Label labelWelcome;
+        private DataGridView dataGridView1;
+        private Button buttonSearchProductSpecification;
+        private Label labelProjectManagement;
+        private Button buttonDeleteSalesOrder;
+        private Button buttonCreateProject;
+        private TextBox textBox1;
+        private Label labelSearchByID;
+        private Button buttonEditSalesOrder;
     }
 }
